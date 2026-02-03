@@ -84,7 +84,7 @@ export function HeroSection ()  {
           className="object-cover"
         />
         {/* Overlay */}
-        <div className="absolute inset-0 bg-[#2a9bd5]/85" />
+        <div className="absolute inset-0 bg-black/65" />
       </div>
 
       {/* Content */}
@@ -93,7 +93,7 @@ export function HeroSection ()  {
 
           {/* Trust Badge */}
           <div className="inline-flex items-center gap-2 bg-white/10 backdrop-blur-sm border border-white/20 rounded-full px-4 py-2 mb-8">
-            <Shield className="w-4 h-4 text-accent" />
+            <Shield className="w-4 h-4 text-primary" />
             <span className="text-white text-sm font-medium">
               Trusted by 500+ Families
             </span>
@@ -102,7 +102,7 @@ export function HeroSection ()  {
           {/* Headline */}
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
             Compassionate Care for{" "}
-            <span className="text-accent">Every Ability</span>
+            <span className="text-primary">Every Ability</span>
           </h1>
 
           {/* Subheadline */}
@@ -114,7 +114,7 @@ export function HeroSection ()  {
 
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
-            <Button variant={"secondary"}  size="lg">
+            <Button   size="lg">
               Book a Free Consultation
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
@@ -130,7 +130,7 @@ export function HeroSection ()  {
             {[{ icon: Heart, text: "Family-Centered Care" }, { icon: Shield, text: "Licensed Professionals" }].map(
               (item, index) => (
                 <div key={index} className="flex items-center gap-2 text-white/80">
-                  <item.icon className="w-5 h-5  text-accent" />
+                  <item.icon className="w-5 h-5  text-primary" />
                   <span className="text-sm font-medium">{item.text}</span>
                 </div>
               )

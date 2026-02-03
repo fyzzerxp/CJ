@@ -50,7 +50,7 @@ export function Header() {
           {/* CTA Buttons */}
           <div className="hidden lg:flex lg:items-center lg:gap-3">
             <Button variant="secondary"  asChild>
-              <Link href="/get-involved">Contact Us</Link>
+              <Link href="/contact">Contact Us</Link>
             </Button>
             <Button  asChild>
               <Link href="/get-involved#donate">Donate</Link>

@@ -39,7 +39,7 @@ function TeamSection() {
   return (
     <section 
       id="team"
-      className="py-16 sm:py-24 bg-secondary"
+      className="py-16 sm:py-24 "
       aria-labelledby="team-heading"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -86,66 +86,6 @@ function TeamSection() {
   )
 }
 
-// News preview section
-function NewsSection() {
-  const news = [
-    {
-      title: "Annual Gala Raises Record Funds",
-      date: "December 15, 2025",
-      excerpt: "Our annual fundraising gala exceeded expectations, raising over $500,000 for new programs.",
-    },
-    {
-      title: "New Therapy Center Opening",
-      date: "November 1, 2025",
-      excerpt: "We are excited to announce the opening of our third therapy center serving the eastern region.",
-    },
-    {
-      title: "Employment Program Milestone",
-      date: "October 20, 2025",
-      excerpt: "Our employment program has now helped over 1,000 individuals find meaningful work.",
-    },
-  ]
-
-  return (
-    <section 
-      id="news"
-      className="py-16 sm:py-24 bg-background"
-      aria-labelledby="news-heading"
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
-          <h2 
-            id="news-heading" 
-            className="text-3xl sm:text-4xl font-bold text-foreground text-balance"
-          >
-            News & Events
-          </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
-            Stay updated with the latest from Ability First Foundation.
-          </p>
-        </div>
-
-        <div 
-          className="grid md:grid-cols-3 gap-6 lg:gap-8"
-          role="list"
-          aria-label="Recent news"
-        >
-          {news.map((item) => (
-            <article 
-              key={item.title}
-              className="bg-card border border-border rounded-xl p-6"
-              role="listitem"
-            >
-              <time className="text-sm text-primary font-medium">{item.date}</time>
-              <h3 className="text-lg font-semibold text-foreground mt-2">{item.title}</h3>
-              <p className="mt-3 text-muted-foreground">{item.excerpt}</p>
-            </article>
-          ))}
-        </div>
-      </div>
-    </section>
-  )
-}
 
 // Page hero for inner pages
 function PageHero({ title, description }: { title: string; description: string }) {
@@ -179,13 +119,12 @@ export default function AboutPage() {
       <main id="main-content" tabIndex={-1}>
         <PageHero 
           title="About Us"
-          description="Learn about our 25-year journey of empowering people with disabilities through compassion, innovation, and community."
+          description="Learn about our  journey of empowering people with disabilities through compassion, innovation, and community."
         />
         <AboutSection />
         <TeamSection />
         <StoriesSection />
-        {/* <FacilitiesSection /> */}
-        <NewsSection />
+       
       </main>
 
       <Footer />

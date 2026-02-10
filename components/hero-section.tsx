@@ -88,7 +88,7 @@ export function HeroSection ()  {
       </div>
 
       {/* Content */}
-      <div className="container relative z-20 mx-auto px-4 py-20 lg:py-32">
+      <div className="container relative z-20 mx-auto px-4 py-20">
         <div className="max-w-3xl">
 
           {/* Trust Badge */}

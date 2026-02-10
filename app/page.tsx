@@ -1,7 +1,6 @@
 import { Header } from "@/components/header"
 import { HeroSection } from "@/components/hero-section"
 import { Footer } from "@/components/footer"
-import { AccessibilityToolbar } from "@/components/accessibility-toolbar"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import {
@@ -12,6 +11,7 @@ import {
   HeartPulse,
   ShieldCheck,
 } from "lucide-react";
+import { AboutPreview } from "@/components/about-preview"
 
 
 const services = [
@@ -19,107 +19,48 @@ const services = [
     icon: Stethoscope,
     title: "Home Nursing & Personal Care",
     description:
-      "Skilled nursing and personal assistance in the comfort of your home. From medication management to daily hygiene support, we're there when you need us.",
+      "Professional nursing and personal care at home—medication support, hygiene assistance, and daily health management.",
     color: "bg-primary",
   },
   {
     icon: Apple,
     title: "Dietary & Nutrition Support",
     description:
-      "Personalized meal planning and nutrition guidance tailored to specific health needs, allergies, and preferences. Healthy eating made simple.",
+      "Personalized meal planning and nutrition guidance tailored to health needs, allergies, and lifestyle goals.",
     color: "bg-coral",
   },
   {
     icon: Baby,
     title: "Child Development Programs",
     description:
-      "Early intervention and developmental support for children. Our specialists work with families to nurture growth through play, learning, and love.",
+      "Early intervention and developmental support that nurtures growth through guided play and learning.",
     color: "bg-primary",
   },
   {
     icon: GraduationCap,
     title: "School-Age Behavioral Support",
     description:
-      "Helping school-age children thrive with behavioral strategies, social skills training, and academic support that works with their unique needs.",
+      "Behavioral strategies and social skills support to help children succeed at school and beyond.",
     color: "bg-coral",
   },
   {
     icon: HeartPulse,
     title: "Health & Daily Living Assistance",
     description:
-      "Support with everyday activities—bathing, dressing, mobility, and more. Maintaining dignity and comfort in daily routines.",
+      "Compassionate support with daily activities while preserving comfort, safety, and dignity.",
     color: "bg-primary",
   },
   {
     icon: ShieldCheck,
     title: "Safety & Caregiver Guidance",
     description:
-      "Training and resources for family caregivers. Learn protective techniques, safety protocols, and self-care strategies to care without burning out.",
+      "Practical training and resources to help caregivers provide safe, confident, and balanced care.",
     color: "bg-coral",
   },
 ];
 
-// Quick about preview
-function AboutPreview() {
-  return (
-    <section 
-      className="py-16 sm:py-24 bg-background"
-      aria-labelledby="about-preview-heading"
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          <div>
-            <h2 
-              id="about-preview-heading" 
-              className="text-3xl sm:text-4xl font-bold text-foreground text-balance"
-            >
-              Our Story of Care and Commitment
-            </h2>
-            <div className="mt-6 space-y-4 text-muted-foreground leading-relaxed">
-              <p>
-                Founded in 1999, Ability First Foundation began with a simple 
-                belief: every person deserves the opportunity to live with 
-                dignity, independence, and purpose.
-              </p>
-              <p>
-                What started as a small community program has grown into a 
-                comprehensive support network, serving thousands of individuals 
-                and families across the region.
-              </p>
-            </div>
-            <div className="mt-8">
-              <Button asChild size="lg" className="h-12 px-8">
-                <Link href="/about">Learn More About Us</Link>
-              </Button>
-            </div>
-          </div>
 
-          <div 
-            className="grid sm:grid-cols-2 gap-6"
-            role="list"
-            aria-label="Our core values"
-          >
-            {[
-              { title: "Inclusion", description: "Everyone belongs and has something valuable to contribute." },
-              { title: "Respect", description: "We honor the dignity of every person." },
-              { title: "Empowerment", description: "We help individuals achieve their goals." },
-              { title: "Excellence", description: "We strive for the highest standards." },
-            ].map((value) => (
-              <div 
-                key={value.title} 
-                className="bg-card border border-border rounded-xl p-6"
-                role="listitem"
-              >
-                <h3 className="text-lg font-semibold text-foreground">{value.title}</h3>
-                <p className="mt-2 text-sm text-muted-foreground">{value.description}</p>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
-  )
-}
+
 
 // Programs preview section
 function ProgramsPreview() {
@@ -128,7 +69,7 @@ function ProgramsPreview() {
       className="py-16 sm:py-24 bg-secondary"
       aria-labelledby="programs-preview-heading"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center max-w-3xl mx-auto mb-12 sm:mb-16">
           <h2 
             id="programs-preview-heading" 
@@ -151,25 +92,60 @@ function ProgramsPreview() {
 
   return (
     <article
-      key={service.title}
-      className="bg-card border border-border rounded-xl p-6 lg:p-8 text-center"
-      role="listitem"
-    >
-      <div
-        className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center text-primary mx-auto mb-5"
-        aria-hidden="true"
-      >
-        <Icon className="w-8 h-8" />
-      </div>
+  key={service.title}
+  role="listitem"
+  className="
+    group
+    relative
+    bg-card 
+    border 
+    border-border 
+    rounded-xl 
+    p-4 lg:p-6
+    text-center
+    transition-all 
+    duration-500 
+    ease-out
+    hover:-translate-y-3
+    hover:shadow-2xl
+    hover:border-primary/40
+    cursor-pointer
+  "
+>
+  {/* Soft Gradient Glow */}
+  <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
 
-      <h3 className="text-xl font-semibold text-foreground">
-        {service.title}
-      </h3>
+  {/* Icon */}
+  <div
+    className="
+      w-16 h-16 
+      bg-primary/10 
+      rounded-xl 
+      flex 
+      items-center 
+      justify-center 
+      text-primary 
+      mx-auto 
+      mb-5
+      transition-all 
+      duration-500
+      group-hover:scale-110
+      group-hover:bg-primary/20
+    "
+    aria-hidden="true"
+  >
+    <Icon className="w-8 h-8 transition-transform duration-500 group-hover:rotate-6" />
+  </div>
 
-      <p className="mt-4 text-muted-foreground">
-        {service.description}
-      </p>
-    </article>
+  <h3 className="text-xl font-semibold text-foreground transition-colors duration-300 group-hover:text-primary">
+    {service.title}
+  </h3>
+
+  <p className="mt-4 text-muted-foreground transition-colors duration-300 group-hover:text-foreground">
+    {service.description}
+  </p>
+</article>
+
   );
 })}
 

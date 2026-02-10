@@ -29,7 +29,7 @@ export function Header() {
             aria-label="Ability First Foundation - Home"
           >
             
-              <img className="w-10 h-10 bg-primary rounded-full" src="logo.jpeg" alt="" />
+              <img className="w-10 h-10 bg-primary rounded-full" src="/logo.jpeg" alt="cj support service logo" />
             
             <span className="font-bold text-lg hidden sm:block">CJ SUPPORT SERVICES</span>
           </Link>

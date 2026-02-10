@@ -1,14 +1,15 @@
 import React from "react"
 import type { Metadata, Viewport } from 'next'
-import { Inter } from 'next/font/google'
 import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 import ScrollToTop from "@/components/utils/sroll-to-top"
+import { Poppins } from "next/font/google";
 
-const inter = Inter({ 
+const poppins = Poppins({
   subsets: ["latin"],
-  display: 'swap',
+  weight: ["400", "500", "600", "700"],
 });
+
 
 export const metadata: Metadata = {
   title: 'Ability First Foundation | Supporting People with Disabilities',
@@ -36,7 +37,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.className} antialiased`}>
+      <body className={`${poppins.className} antialiased`}>
         <ScrollToTop/>
         {children}
         <Analytics />

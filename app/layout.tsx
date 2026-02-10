@@ -12,12 +12,12 @@ const poppins = Poppins({
 
 
 export const metadata: Metadata = {
-  title: 'Ability First Foundation | Supporting People with Disabilities',
-  description: 'Ability First Foundation is a non-profit organization dedicated to empowering people with disabilities through education, therapy, mobility support, and employment programs. Join us in building an inclusive world.',
+  title: 'CJ Support Services| Supporting People with Disabilities',
+  description: 'CJ Support Servicesis a  organization dedicated to empowering people with disabilities through education, therapy, mobility support, and employment programs. Join us in building an inclusive world.',
   keywords: ['disability support', 'non-profit', 'accessibility', 'therapy', 'education', 'employment', 'mobility support', 'inclusive'],
-  authors: [{ name: 'Ability First Foundation' }],
+  authors: [{ name: 'CJ Support Services' }],
   openGraph: {
-    title: 'Ability First Foundation | Supporting People with Disabilities',
+    title: 'CJ Support Services | Supporting People with Disabilities',
     description: 'Empowering people with disabilities through education, therapy, mobility support, and employment programs.',
     type: 'website',
   },

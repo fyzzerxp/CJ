@@ -77,14 +77,14 @@ export function HeroSection ()  {
       {/* Background */}
       <div className="absolute inset-0 z-0">
         <Image
-          src='/hero.jpg'
+          src='/5.png'
           alt="Caring professionals supporting a family member"
           fill
           priority
-          className="object-cover"
+          className="object-cover object-"
         />
         {/* Overlay */}
-        <div className="absolute inset-0 bg-black/65" />
+        <div className="absolute inset-0 bg-black/70" />
       </div>
 
       {/* Content */}
@@ -114,8 +114,8 @@ export function HeroSection ()  {
 
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
-            <Button   size="lg">
-              Book a Free Consultation
+            <Button   size="lg" className="transition-all duration-300 hover:scale-105 hover:shadow-lg">
+              Get in touch
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>
 

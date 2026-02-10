@@ -75,33 +75,7 @@ export function StoriesSection() {
           ))}
         </div>
 
-        {/* Impact Numbers */}
-        <div className="mt-16 bg-primary rounded-xl p-8 sm:p-12 text-center">
-          <h3 className="text-2xl sm:text-3xl font-bold text-primary-foreground mb-8">
-            Our Impact in Numbers
-          </h3>
-          <div 
-            className="grid grid-cols-2 md:grid-cols-4 gap-8"
-            role="list"
-            aria-label="Impact statistics"
-          >
-            {[
-              { number: "92%", label: "Program satisfaction rate" },
-              { number: "85%", label: "Employment success rate" },
-              { number: "3,000+", label: "Families supported annually" },
-              { number: "$2M+", label: "Scholarships awarded" },
-            ].map((stat) => (
-              <div key={stat.label} role="listitem">
-                <p className="text-3xl sm:text-4xl font-bold text-primary-foreground">
-                  {stat.number}
-                </p>
-                <p className="mt-2 text-sm sm:text-base text-primary-foreground/80">
-                  {stat.label}
-                </p>
-              </div>
-            ))}
-          </div>
-        </div>
+       
       </div>
     </section>
   )

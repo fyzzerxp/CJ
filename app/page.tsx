@@ -83,7 +83,7 @@ function ProgramsPreview() {
         </div>
 
         <div 
-          className="grid md:grid-cols-3 gap-6 lg:gap-8"
+          className="grid md:grid-cols-2 lg:grid-cols-3 gap-8"
           role="list"
           aria-label="Featured programs"
         >
@@ -161,36 +161,98 @@ function ProgramsPreview() {
   )
 }
 
-// CTA section for getting involved
-function CTASection() {
+//Parallax section 
+function ParallaxImpactSection() {
   return (
-    <section 
-      className="py-16 sm:py-24 bg-primary"
-      aria-labelledby="cta-heading"
+    <section
+      className="relative py-18 sm:py-26 bg-fixed bg-center bg-cover"
+      style={{
+        backgroundImage: "url('/1.jpeg')", // put inside /public
+      }}
     >
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 
-          id="cta-heading"
-          className="text-3xl sm:text-4xl font-bold text-primary-foreground text-balance"
-        >
-          Join Us in Making a Difference
+      {/* Dark overlay */}
+      <div className="absolute inset-0 bg-black/70" />
+
+      <div className="relative max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+        
+        <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight">
+          Because Every Person Deserves
+          <span className="block mt-2 text-primary">
+            To Feel Safe, Valued & Supported
+          </span>
         </h2>
-        <p className="mt-6 text-lg text-primary-foreground/90 max-w-2xl mx-auto">
-          Whether you want to volunteer, donate, or partner with us, there are many ways 
-          to support our mission and help create a more inclusive world.
+
+        <p className="mt-8 text-lg sm:text-xl text-white/90 max-w-3xl mx-auto leading-relaxed">
+          At CJ SupportServices, we believe care is more than assistance —
+          it’s about presence, patience and genuine human connection.
+          We walk alongside individuals and families, providing support
+          that adapts, empowers and restores confidence in everyday life.
         </p>
-        <div className="mt-10 flex flex-wrap justify-center gap-4">
-          <Button asChild   size="lg" className="h-12 px-8 bg-white text-black hover:bg-gray-100">
-            <Link href="/get-involved">Get Involved</Link>
-          </Button>
-          <Button asChild variant="secondary" size="lg" className="h-12 px-8 round text-black">
-            <Link href="/contact">Contact Us</Link>
-          </Button>
-        </div>
+
+        {/* Optional subtle divider */}
+        <div className="mt-10 w-24 h-1 bg-primary mx-auto rounded-full" />
+
       </div>
     </section>
   )
 }
+
+
+// CTA section for getting involved
+function CTASection() {
+  return (
+    <section
+      aria-labelledby="cta-heading"
+      className="relative py-20 sm:py-28 overflow-hidden bg-primary"
+    >
+      {/* Soft gradient overlay */}
+      <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-primary/80 opacity-90" />
+
+      {/* Decorative glow shapes */}
+      <div className="absolute -top-20 -left-20 w-72 h-72 bg-white/10 rounded-full blur-3xl" />
+      <div className="absolute -bottom-20 -right-20 w-72 h-72 bg-white/10 rounded-full blur-3xl" />
+
+      <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-primary-foreground">
+        
+        <h2
+          id="cta-heading"
+          className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight"
+        >
+          Ready to Take the Next Step?
+          <span className="block mt-2 text-white">
+            Let’s Support You Today.
+          </span>
+        </h2>
+
+        <p className="mt-8 text-lg sm:text-xl text-primary-foreground/90 max-w-2xl mx-auto leading-relaxed">
+          Whether you're seeking support for yourself or a loved one,
+          our team is here to listen, guide and provide care that truly makes a difference.
+        </p>
+
+        <div className="mt-12 flex flex-col sm:flex-row justify-center gap-5">
+          <Button
+            asChild
+            size="lg"
+           
+            className="h-14 px-10 bg-white text-primary font-semibold hover:bg-white/90 transition-all duration-300"
+          >
+            <Link href="/contact">Get Started</Link>
+          </Button>
+
+          <Button
+            asChild
+            size="lg"
+            variant="secondary"
+            className="h-14 px-10 bg-transparent border border-white/40 text-white hover:bg-white/10 transition-all duration-300"
+          >
+            <Link href="/services">Explore Services</Link>
+          </Button>
+        </div>
+      </div>
+    </section>
+  );
+}
+
 
 export default function Home() {
   return (
@@ -202,6 +264,7 @@ export default function Home() {
       <main id="main-content" tabIndex={-1}>
         <HeroSection />
         <AboutPreview />
+        <ParallaxImpactSection/>
         <ProgramsPreview />
         <CTASection />
       </main>

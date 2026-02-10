@@ -77,14 +77,49 @@ export function Header() {
           
 
           {/* CTA Buttons */}
-          <div className="hidden lg:flex lg:items-center lg:gap-3">
-            <Button variant="secondary"  asChild>
-              <Link href="/contact">Contact Us</Link>
-            </Button>
-            <Button  asChild>
-              <Link href="/get-involved#donate">Donate</Link>
-            </Button>
-          </div>
+          <div className="hidden lg:flex lg:items-center lg:gap-4">
+
+{/* Contact - softer */}
+<Button
+  asChild
+  variant="ghost"
+  className="
+    h-10
+    px-5
+    text-foreground
+    hover:bg-primary/10
+    hover:text-primary
+    transition-all
+    duration-300
+  "
+>
+  <Link href="/get-involved#donate">Donate</Link>
+</Button>
+
+{/* Donate - warm highlight */}
+<Button
+  asChild
+  className="
+    h-10
+    px-6
+    rounded-full
+    bg-[#F4B24A] 
+    text-white
+    font-semibold
+    shadow-md
+    hover:bg-[#e7a53c]
+    hover:shadow-lg
+    hover:scale-105
+    transition-all
+    duration-300
+  "
+>
+  <Link href="/contact">Contact Us</Link>
+</Button>
+
+</div>
+
+
 
           {/* Mobile menu button */}
           <button

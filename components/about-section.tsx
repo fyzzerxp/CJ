@@ -186,7 +186,7 @@ export function AboutSection() {
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
               Why Families Trust
               <span className="block text-primary mt-2">
-                CJ SupportServices
+                CJ Support Services
               </span>
             </h2>
 

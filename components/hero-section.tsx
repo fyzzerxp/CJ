@@ -1,29 +1,49 @@
+
+"use client"
+
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { ArrowRight, Phone, Shield, Heart } from "lucide-react";
 import Image from "next/image";
+import { useEffect, useState } from "react";
 
 
-
+const images = ["/hero.jpg", "/2.jpeg", "/7.jpeg"]
 
 
 
 export function HeroSection ()  {
+
+  const [index, setIndex] = useState(0)
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setIndex((prev) => (prev + 1) % images.length)
+    }, 8000)
+
+    return () => clearInterval(interval)
+  }, [])
+
   return (
     <section className="relative  flex items-center pt-8 overflow-hidden">
       
-      {/* Background */}
-      <div className="absolute inset-0 z-0">
+     
+     {/* Background Carousel */}
+     <div className="absolute inset-0 z-0">
+      {images.map((src, i) => (
         <Image
-          src='/hero.jpg'
-          alt="Caring professionals supporting a family member"
+          key={i}
+          src={src}
+          alt=""
           fill
-          priority
-          className="object-cover object-"
+          className={`object-cover transition-opacity duration-1000 ${
+            i === index ? "opacity-100" : "opacity-0"
+          }`}
         />
-        {/* Overlay */}
-        <div className="absolute inset-0 bg-black/70" />
-      </div>
+      ))}
+      <div className="absolute inset-0 bg-black/70" />
+    </div>
+
 
       {/* Content */}
       <div className="container relative z-20 mx-auto px-4 py-28">
@@ -75,6 +95,7 @@ export function HeroSection ()  {
 
         </div>
       </div>
+
     </section>
   );
 }

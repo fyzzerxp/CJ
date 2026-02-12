@@ -97,10 +97,10 @@ export function AboutPreview() {
         <div className="  grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Content */}
           <Reveal>
-            <div className=" space-y-6 ">
+            <div className=" space-y-14 ">
               <h2
                 id="about-preview-heading"
-                className="text-3xl sm:text-4xl font-bold text-foreground text-balance transition-all duration-500 hover:tracking-wide"
+                className="text-4xl sm:text-5xl font-bold text-foreground text-balance transition-all duration-500 hover:tracking-wide"
               >
                 Our Story of Care and Commitment
               </h2>

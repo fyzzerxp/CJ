@@ -2,13 +2,12 @@ import type { Metadata } from "next"
 import { Header } from "@/components/header"
 import { AboutSection } from "@/components/about-section"
 import { StoriesSection } from "@/components/stories-section"
-import { FacilitiesSection } from "@/components/facilities-section"
 import { Footer } from "@/components/footer"
-import { AccessibilityToolbar } from "@/components/accessibility-toolbar"
+
 
 export const metadata: Metadata = {
-  title: "About Us | Ability First Foundation",
-  description: "Learn about Ability First Foundation's 25-year mission of empowering people with disabilities through education, therapy, and community programs.",
+  title: "About Us | CJ Support Services",
+  description: "Learn about CJ Support Services mission of empowering people with disabilities through education, therapy, and community programs.",
 }
 
 // Team section component
@@ -88,26 +87,39 @@ function TeamSection() {
 
 
 // Page hero for inner pages
-function PageHero({ title, description }: { title: string; description: string }) {
+function PageHero() {
   return (
-    <section 
-      className="bg-gradient-to-b from-secondary to-background py-16 sm:py-20"
-      aria-labelledby="page-heading"
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h1 
-          id="page-heading"
-          className="text-4xl sm:text-5xl font-bold text-foreground tracking-tight text-balance"
-        >
-          {title}
+    <section className="relative py-20 sm:py-28 overflow-hidden">
+      
+      {/* Background Image */}
+      <div className="absolute inset-0">
+        <img
+          src="/9.jpeg"
+          alt="About CJ SupportServices"
+          className="w-full h-full object-cover object-[0%_30%]"
+        />
+        <div className="absolute inset-0 bg-black/60" />
+      </div>
+
+      {/* Content */}
+      <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+        
+        <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
+          About Us
         </h1>
-        <p className="mt-6 text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
-          {description}
+
+        <p className="mt-8 text-lg sm:text-xl text-white/90 max-w-2xl mx-auto leading-relaxed">
+          Learn about our journey of empowering people with disabilities
+          through compassion, innovation, and strong community connection.
         </p>
+
+        <div className="mt-10 w-24 h-1 bg-accent mx-auto rounded-full" />
       </div>
     </section>
   )
 }
+
+
 
 export default function AboutPage() {
   return (
@@ -117,10 +129,7 @@ export default function AboutPage() {
       <Header />
 
       <main id="main-content" tabIndex={-1}>
-        <PageHero 
-          title="About Us"
-          description="Learn about our  journey of empowering people with disabilities through compassion, innovation, and community."
-        />
+        <PageHero />
         <AboutSection />
         <TeamSection />
         <StoriesSection />

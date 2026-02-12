@@ -190,7 +190,7 @@ function ParallaxImpactSection() {
         </p>
 
         {/* Optional subtle divider */}
-        <div className="mt-10 w-24 h-1 bg-primary mx-auto rounded-full" />
+        <div className="mt-10 w-24 h-1 bg-accent mx-auto rounded-full" />
 
       </div>
     </section>

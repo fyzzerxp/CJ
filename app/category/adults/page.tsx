@@ -63,19 +63,38 @@ const adultServices = [
 
 function PageHero() {
   return (
-    <section className="bg-gradient-to-b from-secondary to-background py-16 sm:py-20">
-      <div className="max-w-7xl mx-auto px-4 text-center">
-        <h1 className="text-4xl sm:text-5xl font-bold">
-          Adult Services & Programs
-        </h1>
-        <p className="mt-6 text-lg text-muted-foreground max-w-2xl mx-auto">
-          Empowering adults with support, independence, and meaningful
-          community participation.
-        </p>
-      </div>
-    </section>
+   
+       <section className="relative py-20 sm:py-28 overflow-hidden">
+      
+       {/* Background Image */}
+       <div className="absolute inset-0">
+         <img
+           src="/6.jpeg"
+           alt="About CJ SupportServices"
+           className="w-full h-full object-cover object-[0%_30%]"
+         />
+         <div className="absolute inset-0 bg-black/60" />
+       </div>
+  
+       {/* Content */}
+       <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
+         
+         <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold leading-tight">
+         Adult Services & Programs
+         </h1>
+  
+         <p className="mt-8 text-lg sm:text-xl text-white/90 max-w-2xl mx-auto leading-relaxed">
+         Empowering adults with support, independence, and meaningful
+              community participation.
+         </p>
+  
+         <div className="mt-10 w-24 h-1 bg-accent mx-auto rounded-full" />
+       </div>
+     </section>
+    
   )
 }
+
 
 function ServicesGrid() {
   return (

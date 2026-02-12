@@ -59,8 +59,8 @@ export function HeroSection ()  {
 
           {/* Headline */}
           <h1 className="text-5xl md:text-6xl font-bold text-white mb-6">
-            Compassionate Care for{" "}
-            <span className="text-primary">Every Ability</span>
+          Care That Feels <span className="text-primary">Personal.</span> Support That Makes Life  <span className="text-primary">Easier.</span>
+            
           </h1>
 
           {/* Subheadline */}

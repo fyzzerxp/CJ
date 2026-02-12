@@ -10,24 +10,104 @@ export const metadata: Metadata = {
     "Support services designed for children including school-age health, behaviour support, before and after school care, and developmental programs.",
 }
 
-const kidsServices = [
+export const kidsServices = [
   {
-    id: "school-health",
-    title: "School Age Health Support",
+    id: "before-school-care",
+    title: "Before School Care",
+    href: "/category/kids/before-school-care",
     description:
-      "Professional health support tailored for school-aged children to ensure their physical wellbeing and daily care needs are met in a safe and supportive environment.",
+      "Safe and structured morning care that helps children begin their school day with confidence, routine, and support.",
+    features: [
+      "Morning Supervision",
+      "Breakfast Support",
+      "Routine Development",
+      "School Drop-off Assistance",
+    ],
+  },
+  {
+    id: "after-school-support",
+    title: "After School Support",
+    href: "/category/kids/after-school-support",
+    description:
+      "Structured and engaging after-school support designed to help children relax, learn, and build confidence in a safe environment.",
+    features: [
+      "Homework Assistance",
+      "Creative & Recreational Activities",
+      "Social Interaction Programs",
+      "Emotional & Behavioural Support",
+    ],
+  },
+  {
+    id: "weekend-support",
+    title: "Weekend Support for Children",
+    href: "/category/kids/weekend-support",
+    description:
+      "Flexible weekend support services providing engaging, safe, and structured care tailored to each child’s needs.",
+    features: [
+      "Structured Weekend Activities",
+      "Community Participation",
+      "Social Skill Development",
+      "Family Support Options",
+    ],
+  },
+  {
+    id: "school-transport",
+    title: "School Transport Service",
+    href: "/category/kids/school-transport",
+    description:
+      "Safe, reliable, and supervised transport services to support children travelling between home, school, and approved activities.",
+    features: [
+      "Supervised Pick-up & Drop-off",
+      "Safe Travel Assistance",
+      "NDIS Approved Transport Support",
+      "Reliable Scheduling",
+    ],
+  },
+  {
+    id: "school-age-health",
+    title: "School-Age Health & Daily Care",
+    href: "/category/kids/school-age-health",
+    description:
+      "Professional health and daily care support tailored for school-aged children requiring additional assistance.",
     features: [
       "Medication Assistance",
-      "Chronic Condition Monitoring",
-      "Individual Health Plans",
+      "Personal Care Support",
+      "Health Monitoring",
       "Coordination with Schools",
     ],
   },
   {
-    id: "behaviour",
-    title: "School Age Behaviour Support",
+    id: "school-age-nutrition",
+    title: "School-Age Nutrition & Fitness",
+    href: "/category/kids/school-age-nutrition",
     description:
-      "Positive behaviour strategies and therapeutic support to help children develop emotional regulation, social skills, and confidence.",
+      "Promoting healthy habits through structured nutrition guidance and age-appropriate physical activity programs.",
+    features: [
+      "Healthy Eating Support",
+      "Nutrition Guidance",
+      "Physical Activity Programs",
+      "Wellbeing Education",
+    ],
+  },
+  {
+    id: "school-age-safety",
+    title: "School-Age Safety & Protection",
+    href: "/categorykids/school-age-safety",
+    description:
+      "Ensuring children’s safety, wellbeing, and protection through structured supervision and safeguarding practices.",
+    features: [
+      "Safe Supervision",
+      "Protective Environment",
+      "Risk Awareness Education",
+      "Safeguarding Practices",
+    ],
+  },
+  {
+    id: "school-age-behaviour",
+    title: "School-Age Behavioural Support",
+    href: "/category/kids/school-age-behaviour",
+    description:
+      "Positive behaviour support programs designed to help children develop emotional regulation and social confidence.",
     features: [
       "Behaviour Support Plans",
       "Emotional Regulation Skills",
@@ -35,31 +115,9 @@ const kidsServices = [
       "Social Skill Development",
     ],
   },
-  {
-    id: "before-school",
-    title: "Before School Care",
-    description:
-      "Safe and engaging care before school hours to help children start their day with confidence and routine.",
-    features: [
-      "Morning Supervision",
-      "Structured Activities",
-      "Breakfast Assistance",
-      "School Drop-off Support",
-    ],
-  },
-  {
-    id: "after-school",
-    title: "After School Support",
-    description:
-      "Structured and fun after-school programs focused on development, learning support, and social interaction.",
-    features: [
-      "Homework Assistance",
-      "Creative Activities",
-      "Social Interaction Programs",
-      "Skill Development Sessions",
-    ],
-  },
 ]
+
+
 function PageHero() {
   return (
     
@@ -118,7 +176,7 @@ function ServicesGrid() {
 
                 <div className="mt-6">
                   <Button asChild>
-                    <Link href="/contact">Learn More</Link>
+                    <Link href={service.href}>Learn More</Link>
                   </Button>
                 </div>
               </div>

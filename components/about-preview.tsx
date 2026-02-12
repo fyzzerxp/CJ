@@ -97,24 +97,27 @@ export function AboutPreview() {
         <div className="  grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
           {/* Left Content */}
           <Reveal>
-            <div className=" space-y-14 ">
+            <div className="space-y-14">
               <h2
                 id="about-preview-heading"
                 className="text-4xl sm:text-5xl font-bold text-foreground text-balance transition-all duration-500 hover:tracking-wide"
               >
-                Our Story of Care and Commitment
+                Compassionate care for every ablity
               </h2>
 
-              <div className="space-y-4 text-muted-foreground leading-relaxed">
+              <div className="space-y-6 text-muted-foreground leading-relaxed">
                 <p className="transition-colors duration-300 hover:text-foreground">
-                  Founded in 1999, Ability First Foundation began with a simple
-                  belief: every person deserves the opportunity to live with
-                  dignity, independence, and purpose.
+                  At CJ SupportServices, we provide compassionate, reliable and
+                  person-centred support to children, adults, families, carers
+                  and older individuals across Melbourne and Victoria.
                 </p>
+
+                
+
                 <p className="transition-colors duration-300 hover:text-foreground">
-                  What started as a small community program has grown into a
-                  comprehensive support network, serving thousands of
-                  individuals and families across the region.
+                  Our focus is not only on delivering services, but on building
+                  long-term, trusted relationships that help people feel safe,
+                  confident and supported in their everyday lives.
                 </p>
               </div>
 
@@ -132,7 +135,7 @@ export function AboutPreview() {
 
           {/* Value Cards */}
           <div
-            className=" grid sm:grid-cols-2 gap-6"
+            className="grid sm:grid-cols-2 gap-6 auto-rows-fr"
             role="list"
             aria-label="Our core values"
           >
@@ -141,21 +144,24 @@ export function AboutPreview() {
                 <div
                   role="listitem"
                   className="
-                  group
-                  relative
-                  bg-card 
-                  border 
-                  border-border 
-                  rounded-xl 
-                  p-6
-                  transition-all
-                  duration-500
-                  ease-out
-                  hover:-translate-y-3
-                  hover:shadow-2xl
-                  hover:border-primary/40
-                  cursor-pointer
-                "
+  group
+  relative
+  bg-card 
+  border 
+  border-border 
+  rounded-xl 
+  p-6
+  h-full
+  flex
+  flex-col
+  transition-all
+  duration-500
+  ease-out
+  hover:-translate-y-3
+  hover:shadow-2xl
+  hover:border-primary/40
+  cursor-pointer
+"
                 >
                   <div className="absolute inset-0 rounded-xl bg-gradient-to-br from-primary/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                   <div className="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary mb-4">

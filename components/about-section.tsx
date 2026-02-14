@@ -164,9 +164,9 @@ export function AboutSection() {
               {/* Image */}
               <div className="relative w-full max-w-lg">
               <img
-                src="/2.jpeg"
+                src="/10.png"
                 alt="Support and care"
-                className="rounded-2xl shadow-xl object-cover w-full h-[400px] sm:h-[500px]"
+                className="rounded-2xl shadow-xl object-cover object-right w-full h-[400px] sm:h-[500px]"
               />
 
               {/* Decorative glow */}

@@ -14,6 +14,7 @@ const programs = [
   {
     id: "nursing",
     title: "Home Nursing Services",
+    href:"/category/adults/home-nursing",
     description: "We deliver professional and compassionate home nursing services to individuals across Melbourne and Victoria. Our approach is centred on providing high-quality clinical care while supporting independane, dignity, and comfort within the familiarity of home.",
     icon: (
       <svg className="w-10 h-10" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" aria-hidden="true">
@@ -33,6 +34,7 @@ const programs = [
   {
     id: "diet",
     title: "Dietitian Services",
+    href:"/category/adults/dietitian",
     description: "we recognise that good nutrition plays a vital role in overall health, wellbeing, and independence. Our Dietitian Services are designed to help individuals optimise their nutritional intake, manage chronic health conditions, and build sustainable, healthy eating habits that support everyday living",
     icon: (
       <svg className="w-10 h-10" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" aria-hidden="true">
@@ -51,6 +53,7 @@ const programs = [
   {
     id: "homecare",
     title: "Home Care Support",
+    href:"/services/home-care-support",
     description: "We believe home is more than just a place — it’s where comfort, independence, and dignity belong. Our Home Care Support services are designed to help you or your loved one remain safe, supported and thriving in familiar surroundings. We combine personalised care with respect, compassion and practical assistance so you can live life on your terms.",
     icon: (
       <svg className="w-10 h-10" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" aria-hidden="true">
@@ -70,6 +73,7 @@ const programs = [
   {
     id: "transport",
     title: "Disability Transport Service",
+    href:"/category/adults/disability-transport",
     description: "We understand that safe, reliable transport is essential for independence, connection, and everyday life. Our Disability Transport Services are designed to support individuals in Melbourne and across Victoria to travel with confidence, comfort, and dignity. As a provider, we don’t just offer transport — we create freedom, access, and opportunity.",
     icon: (
       <svg className="w-10 h-10" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" aria-hidden="true">
@@ -88,6 +92,7 @@ const programs = [
   {
     id: "community",
     title: "Community Participation",
+    href:"/services/community",
     description: "we believe that meaningful engagement, personal growth, skill development, and community connection are essential parts of everyday life. Our Day Programs are designed to help individuals build confidence, make connections, explore interests, and participate fully in community life.",
     icon: (
       <svg className="w-10 h-10" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" aria-hidden="true">
@@ -106,6 +111,7 @@ const programs = [
   {
     id: "inhome",
     title: " In-Home Aged Care",
+    href:"/category/adults/home-care",
     description: "We believe that older adults deserve to live with comfort, dignity and independence for as long as possible — in the familiar surroundings of their own home. Our in-home aged care support services help you or your loved one stay safe, connected and supported while maintaining quality of life.",
     icon: (
       <svg className="w-10 h-10" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" aria-hidden="true">
@@ -124,6 +130,7 @@ const programs = [
   {
     id: "respite",
     title: "Respite Care & Short-Term Support",
+    href:"/category/adults/respite",
     description: "We understand that caring for a loved one is both rewarding and demanding. Sometimes, carers need a break, support to recharge, or extra help during busy times. That’s where our Respite Care Services come in — providing temporary relief while ensuring your loved one continues to receive high-quality, compassionate support.",
     icon: (
       <svg className="w-10 h-10" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" aria-hidden="true">
@@ -194,7 +201,7 @@ function ProgramsGrid() {
                   </p>
                   <div className="mt-6">
                     <Button asChild>
-                      <Link href="/contact">Learn More</Link>
+                      <Link href={program.href}>Learn More</Link>
                     </Button>
                   </div>
                 </div>

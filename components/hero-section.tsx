@@ -8,7 +8,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 
-const images = ["/hero.jpg", "/2.jpeg", "/7.jpeg"]
+const images = ["/hero.jpg", "/10.png", "/11.png"]
 
 
 
@@ -19,7 +19,7 @@ export function HeroSection ()  {
   useEffect(() => {
     const interval = setInterval(() => {
       setIndex((prev) => (prev + 1) % images.length)
-    }, 8000)
+    }, 6000)
 
     return () => clearInterval(interval)
   }, [])
@@ -36,7 +36,7 @@ export function HeroSection ()  {
           src={src}
           alt=""
           fill
-          className={`object-cover transition-opacity duration-1000 ${
+          className={`object-cover transition-opacity duration-3500 ${
             i === index ? "opacity-100" : "opacity-0"
           }`}
         />

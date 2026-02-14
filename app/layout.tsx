@@ -4,6 +4,7 @@ import { Analytics } from '@vercel/analytics/next'
 import './globals.css'
 import ScrollToTop from "@/components/utils/sroll-to-top"
 import { Poppins } from "next/font/google";
+import WhatsAppFloatingButton from "@/components/whatsapp-floater"
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -38,6 +39,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${poppins.className} antialiased`}>
+      <WhatsAppFloatingButton />
         <ScrollToTop/>
         {children}
         <Analytics />

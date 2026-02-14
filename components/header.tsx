@@ -24,15 +24,28 @@ export function Header() {
         <div className="flex items-center justify-between h-16 lg:h-20">
           {/* Logo */}
           <Link 
-            href="/" 
-            className="flex items-center gap-2 text-foreground"
-            aria-label="Ability First Foundation - Home"
-          >
-            
-              <img className="w-10 h-10 bg-primary rounded-full" src="/logo.jpeg" alt="cj support service logo" />
-            
-            <span className="font-bold text-lg hidden sm:block">CJ SUPPORT SERVICES</span>
-          </Link>
+  href="/" 
+  className="flex items-center gap-3"
+  aria-label="Ability First Foundation - Home"
+>
+  <img 
+    className="w-10 h-10 rounded-full object-cover"
+    src="/logo.jpeg" 
+    alt="cj support service logo" 
+  />
+
+<div className="flex flex-col  items-center">
+  <span className="font-bold text-lg hidden sm:block leading-tight">
+    CJ SUPPORT SERVICES
+  </span>
+  <span className="text-[12px] text-muted-foreground -mt-0.5">
+    When support meets care
+  </span>
+</div>
+
+</Link>
+
+
 
           
 

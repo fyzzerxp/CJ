@@ -16,7 +16,7 @@ import { ServiceDetails } from "@/components/service-details"
   
   As a provider, we support children emotionally, socially, and practically, helping them transition smoothly from school to home life.
   `,
-  
+  category:"Kids Services",
     approach: {
       title: "Our Approach",
       content:
@@ -113,10 +113,12 @@ import { ServiceDetails } from "@/components/service-details"
   }
   
 
-export const metadata: Metadata = {
-  title: "After School Care | Ability First Foundation",
-  description: afterSchoolCareService.description,
-}
+  export const metadata: Metadata = {
+    title: "After School Support Services Melbourne | CJ SupportServices",
+    description:
+      "Safe and structured after school support for children across Melbourne & Victoria. NDIS-supported programs focused on wellbeing, behaviour, learning and supervision.",
+  }
+  
 
 
 

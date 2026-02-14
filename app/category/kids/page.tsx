@@ -92,7 +92,7 @@ export const kidsServices = [
   {
     id: "school-age-safety",
     title: "School-Age Safety & Protection",
-    href: "/categorykids/school-age-safety",
+    href: "/category/kids/school-age-safety",
     description:
       "Ensuring children’s safety, wellbeing, and protection through structured supervision and safeguarding practices.",
     features: [

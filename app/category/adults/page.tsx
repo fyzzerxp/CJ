@@ -5,61 +5,112 @@ import { Footer } from "@/components/footer"
 import { Button } from "@/components/ui/button"
 
 export const metadata: Metadata = {
-  title: "Adult Services | CJ SUPPORT SERVICES",
+  title: "Adult Support & Home Care Services | CJ SupportServices",
   description:
-    "Comprehensive adult support services including employment support, community participation, independent living assistance, and health programs.",
+    "Home nursing, post-hospital care, aged care packages, domestic support, respite care and disability transport across Melbourne and Regional Victoria.",
 }
+
 
 const adultServices = [
   {
-    id: "employment",
-    title: "Employment Support",
+    id: "home-nursing",
+    title: "Home Nursing Services",
+    href:"/category/adults/home-nursing",
     description:
-      "Helping adults build skills, confidence, and pathways into meaningful employment opportunities.",
+      "Professional clinical care delivered in the comfort and safety of your home.",
     features: [
-      "Job Readiness Training",
-      "Resume & Interview Support",
-      "Workplace Mentoring",
-      "Ongoing Employment Assistance",
+      "Medication Management",
+      "Wound & Skin Care",
+      "Diabetes Support",
+      "Continence Care",
+      "Palliative Support",
+      "Post-Hospital Nursing Care",
+      "Catheter & Stoma Management",
     ],
   },
   {
-    id: "independent-living",
-    title: "Independent Living Support",
+    id: "post-hospital",
+    title: "Post-Hospital Care & Recovery Support",
+    href:"/category/adults/post-hospital",
     description:
-      "Support designed to promote autonomy, safety, and independence in everyday life.",
+      "Safe transition support from hospital to home with ongoing recovery assistance.",
     features: [
-      "Daily Living Assistance",
-      "Budgeting & Life Skills",
+      "Health Monitoring",
+      "Medication Support",
+      "Wound & Recovery Care",
+      "Personal Care & Mobility Assistance",
       "Household Support",
+      "Transport to Medical Appointments",
+    ],
+  },
+  {
+    id: "domestic-support",
+    title: "Cleaning & Domestic Support",
+    href:"/category/adults/cleaning",
+    description:
+      "Maintaining a clean, safe, and comfortable home environment.",
+    features: [
+      "General House Cleaning",
+      "Laundry & Linen",
+      "Kitchen & Bathroom Cleaning",
+      "Bedroom & Living Space Support",
+    ],
+  },
+  {
+    id: "nutrition",
+    title: "Dietitian & Nutrition Support",
+    href:"/category/adults/dietitian",
+    description:
+      "Personalised nutrition guidance to support health and wellbeing.",
+    features: [
+      "Health Condition Nutrition Support",
+      "Meal Planning",
+      "Weight & Diabetes Management",
+      "Food Education & Wellbeing Strategies",
+    ],
+  },
+  {
+    id: "aged-care",
+    title: "Aged Care Home Care Packages",
+    href:"/category/adults/home-care",
+    description:
+      "Comprehensive support to help you live independently as you age.",
+    features: [
+      "Personal Care",
+      "Domestic Assistance",
+      "Medication Support",
+      "Transport & Community Access",
+      "Social & Wellbeing Support",
+    ],
+  },
+  {
+    id: "respite",
+    title: "Respite Care",
+    href:"/category/adults/respite-care",
+    description:
+      "Short-term care support for clients and their families.",
+    features: [
+      "In-Home Respite",
+      "Short-Term Personal Care",
+      "Companionship & Supervision",
+      "Flexible Scheduling",
+    ],
+  },
+  {
+    id: "transport",
+    title: "Disability Transport",
+    href:"/category/adults/disability-transport",
+    description:
+      "Safe and reliable transport to help you stay connected and independent.",
+    features: [
+      "Medical Appointments",
       "Community Access",
-    ],
-  },
-  {
-    id: "health",
-    title: "Health & Wellbeing Programs",
-    description:
-      "Personalised health programs focused on physical, mental, and emotional wellbeing.",
-    features: [
-      "Wellbeing Coaching",
-      "Chronic Condition Support",
-      "Mental Health Support",
-      "Lifestyle Programs",
-    ],
-  },
-  {
-    id: "community",
-    title: "Community Participation",
-    description:
-      "Encouraging adults to build connections, develop skills, and engage meaningfully within the community.",
-    features: [
-      "Group Activities",
-      "Skill Development Workshops",
-      "Recreational Programs",
-      "Social Engagement Events",
+      "Social Outings",
+      "Daily Activities",
     ],
   },
 ]
+
 
 function PageHero() {
   return (
@@ -120,7 +171,7 @@ function ServicesGrid() {
 
                 <div className="mt-6">
                   <Button asChild>
-                    <Link href="/contact">Learn More</Link>
+                    <Link href={service.href}>Learn More</Link>
                   </Button>
                 </div>
               </div>

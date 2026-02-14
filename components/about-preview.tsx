@@ -102,7 +102,7 @@ export function AboutPreview() {
                 id="about-preview-heading"
                 className="text-4xl sm:text-5xl font-bold text-foreground text-balance transition-all duration-500 hover:tracking-wide"
               >
-                Compassionate care for every ablity
+                Compassionate care for every ability
               </h2>
 
               <div className="space-y-6 text-muted-foreground leading-relaxed">

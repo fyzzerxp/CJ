@@ -8,6 +8,17 @@ import { Header } from "@/components/header";
 import { Footer } from "@/components/footer";
 import { Button } from "@/components/ui/button";
 
+import {
+  Stethoscope,
+  Utensils,
+  Home,
+  Car,
+  Users,
+  UserRound,
+  HandHeart,
+  HeartPulse,
+} from "lucide-react"
+
 const metadata: Metadata = {
   title: "Adult Support & Home Care Services | CJ SupportServices",
   description:
@@ -177,7 +188,16 @@ function PageHero() {
 }
 
 function ServicesGrid() {
-  const serviceIcons = ["⚕️", "🏥", "🏠", "🥗", "👴", "☀️", "🚗", "💼"];
+  const serviceIcons = [
+    Stethoscope,
+     Utensils,
+    Home,
+     Car,
+     Users,
+     UserRound,
+     HandHeart,
+    HeartPulse,
+  ];
 
   return (
     <section className="py-20 sm:py-28 bg-background relative overflow-hidden">
@@ -203,62 +223,65 @@ function ServicesGrid() {
         </motion.div>
 
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-          {adultServices.map((service, index) => (
-            <motion.article
-              key={service.id}
-              initial={{ opacity: 0, y: 60 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              viewport={{ once: true }}
-              transition={{ duration: 0.6, delay: index * 0.1 }}
-              className="group"
-            >
-              <div className="relative h-full bg-gradient-to-br from-card to-card/80 rounded-3xl p-8 border border-border hover:border-primary/30 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 hover:-translate-y-1 overflow-hidden">
-                {/* Accent line */}
-                <div className="absolute top-0 left-0 h-1 w-0 bg-gradient-to-r from-primary via-secondary to-accent group-hover:w-full transition-all duration-500" />
+          {adultServices.map((service, index) => {
+            const Icon = serviceIcons[index % serviceIcons.length];
+            return (
+              <motion.article
+                key={service.id}
+                initial={{ opacity: 0, y: 60 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6, delay: index * 0.1 }}
+                className="group"
+              >
+                <div className="relative h-full bg-gradient-to-br from-card to-card/80 rounded-3xl p-8 border border-border hover:border-primary/30 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 hover:-translate-y-1 overflow-hidden">
+                  {/* Accent line */}
+                  <div className="absolute top-0 left-0 h-1 w-0 bg-gradient-to-r from-primary via-secondary to-accent group-hover:w-full transition-all duration-500" />
 
-                <div className="relative">
-                  {/* Title with Icon */}
-                  <div className="flex items-start gap-4 mb-4">
-                    <span className="text-4xl mt-1">
-                      {serviceIcons[index % serviceIcons.length]}
-                    </span>
-                    <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors duration-300 flex-1">
-                      {service.title}
-                    </h3>
+                  <div className="relative">
+                    {/* Title with Icon */}
+                    <div className="flex items-start gap-4 mb-4">
+                      <div className="w-12 h-12 flex items-center justify-center rounded-xl bg-primary/10 text-primary">
+                        <Icon className="w-6 h-6" strokeWidth={1.5} />
+                      </div>
+                      <h3 className="text-lg font-bold text-foreground group-hover:text-primary transition-colors duration-300 flex-1">
+                        {service.title}
+                      </h3>
+                    </div>
+
+                    {/* Description */}
+                    <p className="text-muted-foreground leading-relaxed mb-6 text-sm">
+                      {service.description}
+                    </p>
+
+                    {/* Features */}
+                    <div className="space-y-2 mb-7">
+                      {service.features.slice(0, 3).map((feature) => (
+                        <motion.div
+                          key={feature}
+                          className="flex gap-2 items-start text-xs text-muted-foreground group-hover:text-foreground transition-colors"
+                          whileHover={{ x: 4 }}
+                        >
+                          <span className="text-primary font-bold mt-0.5 flex-shrink-0">
+                            •
+                          </span>
+                          <span>{feature}</span>
+                        </motion.div>
+                      ))}
+                    </div>
+
+                    {/* Button */}
+                    <Button
+                      asChild
+                      className="w-full bg-primary  text-white font-semibold rounded-full transition-all duration-300 group-hover:shadow-lg group-hover:shadow-primary/30"
+                    >
+                      <Link href={service.href}>Learn More →</Link>
+                    </Button>
                   </div>
-
-                  {/* Description */}
-                  <p className="text-muted-foreground leading-relaxed mb-6 text-sm">
-                    {service.description}
-                  </p>
-
-                  {/* Features */}
-                  <div className="space-y-2 mb-7">
-                    {service.features.slice(0, 3).map((feature) => (
-                      <motion.div
-                        key={feature}
-                        className="flex gap-2 items-start text-xs text-muted-foreground group-hover:text-foreground transition-colors"
-                        whileHover={{ x: 4 }}
-                      >
-                        <span className="text-primary font-bold mt-0.5 flex-shrink-0">
-                          •
-                        </span>
-                        <span>{feature}</span>
-                      </motion.div>
-                    ))}
-                  </div>
-
-                  {/* Button */}
-                  <Button
-                    asChild
-                    className="w-full bg-primary  text-white font-semibold rounded-full transition-all duration-300 group-hover:shadow-lg group-hover:shadow-primary/30"
-                  >
-                    <Link href={service.href}>Learn More →</Link>
-                  </Button>
                 </div>
-              </div>
-            </motion.article>
-          ))}
+              </motion.article>
+            );
+          })}
         </div>
       </div>
     </section>

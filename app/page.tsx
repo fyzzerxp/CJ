@@ -17,7 +17,7 @@ import { AboutPreview } from "@/components/about-preview"
 const services = [
   {
     icon: Stethoscope,
-    title: "Home Nursing & Personal Care",
+    title: "Home Nursing",
     description:
       "Professional nursing and personal care at home—medication support, hygiene assistance, and daily health management.",
     color: "bg-primary",

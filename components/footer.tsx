@@ -2,20 +2,17 @@ import Link from "next/link"
 
 const footerLinks = {
   programs: [
-    { label: "Educational Support", href: "/programs#educational" },
-    { label: "Therapy Services", href: "/programs#therapy" },
-    { label: "Mobility Support", href: "/programs#mobility" },
-    { label: "Employment Programs", href: "/programs#employment" },
-    { label: "Community Integration", href: "/programs#community" },
-    { label: "Family Resources", href: "/programs#family" },
+    { label: "Educational Support", href: "/category/kids" },
+    { label: "Home Nursing", href: "/programs#therapy" },
+    { label: "Dietitian Servcies", href: "/category/adults/dietitian" },
+    { label: "Community Support", href: "/services/community" },
+    { label: "Home Care", href: "/services/home-care-support" },
   ],
   organization: [
     { label: "About Us", href: "/about" },
     { label: "Our Team", href: "/about#team" },
     { label: "Success Stories", href: "/about#stories" },
-    { label: "Facilities", href: "/about#facilities" },
-    { label: "News & Events", href: "/about#news" },
-    { label: "Careers", href: "/get-involved#careers" },
+    
   ],
   support: [
     { label: "Get Support", href: "/contact" },
@@ -49,7 +46,7 @@ export function Footer() {
             </Link>
             <p className="mt-4 text-sm text-background/70 leading-relaxed">
               Empowering people with disabilities through education, therapy, 
-              and community programs since 1999.
+              and community programs .
             </p>
             {/* Social Links */}
             <div className="mt-6 flex gap-4">

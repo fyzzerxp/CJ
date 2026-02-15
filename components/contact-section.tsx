@@ -1,31 +1,117 @@
 "use client"
 
-import React from "react"
-
-import { useState } from "react"
+import React, { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
+import axios from "axios"
+
+
+interface FormErrors {
+  name?: string
+  email?: string
+  phone?: string
+  subject?: string
+  message?: string
+}
 
 export function ContactSection() {
   const [formState, setFormState] = useState({
+    access_key:process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY,
     name: "",
     email: "",
     phone: "",
     subject: "",
     message: "",
   })
+
+  const [errors, setErrors] = useState<FormErrors>({})
   const [isSubmitting, setIsSubmitting] = useState(false)
   const [submitted, setSubmitted] = useState(false)
+  const [resultMessage, setResultMessage] = useState("")
+
+
+
+  const validate = (): FormErrors => {
+    const newErrors: FormErrors = {}
+
+    if (!formState.name.trim())
+      newErrors.name = "Full name is required"
+
+    if (!formState.email.trim())
+      newErrors.email = "Email is required"
+    else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formState.email))
+      newErrors.email = "Invalid email format"
+
+    if (formState.phone && !/^[\+]?[0-9\s\-()]{7,}$/.test(formState.phone))
+      newErrors.phone = "Invalid phone number"
+
+    if (!formState.subject)
+      newErrors.subject = "Please select a subject"
+
+    if (!formState.message.trim())
+      newErrors.message = "Message is required"
+    else if (formState.message.length < 10)
+      newErrors.message = "Message must be at least 10 characters"
+
+    return newErrors
+  }
+
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault()
+  
+    const validationErrors = validate()
+    if (Object.keys(validationErrors).length > 0) {
+      setErrors(validationErrors)
+      return
+    }
+  
     setIsSubmitting(true)
-    // Simulate form submission
-    await new Promise(resolve => setTimeout(resolve, 1000))
-    setIsSubmitting(false)
-    setSubmitted(true)
+    setErrors({})
+    setResultMessage("Sending...")
+  
+    try {
+      const response = await axios.post("https://api.web3forms.com/submit", formState, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+  
+      if (response.data.success) {
+        setSubmitted(true)
+  
+        setFormState({
+          access_key:process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY,
+          name: "",
+          email: "",
+          phone: "",
+          subject: "",
+          message: "",
+        })
+  
+        setResultMessage("")
+      } else {
+        setResultMessage("Something went wrong. Please try again.")
+      }
+  
+    } catch (error: any) {
+      console.error("Submit error:", error)
+  
+      if (error.response) {
+        // Server responded but with error status
+        setResultMessage(error.response.data?.message || "Submission failed.")
+      } else if (error.request) {
+        // Request made but no response
+        setResultMessage("No response from server.")
+      } else {
+        // Something else happened
+        setResultMessage("Unexpected error occurred.")
+      }
+    } finally {
+      setIsSubmitting(false)
+    }
   }
-
+  
   return (
     <section 
       id="contact" 
@@ -68,15 +154,13 @@ export function ContactSection() {
                   <h4 className="font-medium text-foreground">Phone</h4>
                   <p className="mt-1">
                     <a 
-                      href="tel:+15551234567" 
+                      href="tel:+61457052522" 
                       className="text-muted-foreground hover:text-primary transition-colors"
                     >
-                      (555) 123-4567
+                      61 457052522
                     </a>
                   </p>
-                  <p className="text-sm text-muted-foreground mt-1">
-                    TTY: (555) 123-4568
-                  </p>
+                 
                 </div>
               </div>
 
@@ -93,7 +177,7 @@ export function ContactSection() {
                       href="mailto:info@abilityfirst.org" 
                       className="text-muted-foreground hover:text-primary transition-colors"
                     >
-                      info@abilityfirst.org
+                      info@cjsupportservices.com.au
                     </a>
                   </p>
                 </div>
@@ -118,134 +202,153 @@ export function ContactSection() {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-card border border-border rounded-xl p-6 sm:p-8">
+           <div className="bg-card border border-border rounded-xl p-6 sm:p-8">
+
             {submitted ? (
-              <div 
-                className="text-center py-8"
-                role="alert"
-                aria-live="polite"
-              >
-                <div className="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center text-primary mx-auto mb-4" aria-hidden="true">
-                  <svg className="w-8 h-8" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-                  </svg>
-                </div>
-                <h3 className="text-xl font-semibold text-foreground">Thank You!</h3>
+              <div className="text-center py-8">
+                <h3 className="text-xl font-semibold text-foreground">
+                  Thank You!
+                </h3>
                 <p className="mt-2 text-muted-foreground">
-                  We have received your message and will get back to you within 1-2 business days.
+                  We received your message and will reply soon.
                 </p>
-                <Button 
+                <Button
                   className="mt-6"
-                  onClick={() => {
-                    setSubmitted(false)
-                    setFormState({ name: "", email: "", phone: "", subject: "", message: "" })
-                  }}
+                  onClick={() => setSubmitted(false)}
                 >
                   Send Another Message
                 </Button>
               </div>
             ) : (
               <form onSubmit={handleSubmit} className="space-y-5">
+
+                {/* NAME */}
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-foreground mb-2">
-                    Full Name <span className="text-destructive" aria-hidden="true">*</span>
-                    <span className="sr-only">(required)</span>
+                  <label className="block text-sm font-medium mb-2">
+                    Full Name *
                   </label>
                   <Input
-                    id="name"
                     name="name"
-                    type="text"
-                    required
-                    autoComplete="name"
                     value={formState.name}
-                    onChange={(e) => setFormState({ ...formState, name: e.target.value })}
-                    className="h-12"
-                    aria-required="true"
+                    onChange={(e) =>
+                      setFormState({ ...formState, name: e.target.value })
+                    }
+                    className={`h-12 ${errors.name ? "border-red-500" : ""}`}
                   />
+                  {errors.name && (
+                    <p className="text-red-500 text-sm mt-1">
+                      {errors.name}
+                    </p>
+                  )}
                 </div>
 
+                {/* EMAIL */}
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-foreground mb-2">
-                    Email Address <span className="text-destructive" aria-hidden="true">*</span>
-                    <span className="sr-only">(required)</span>
+                  <label className="block text-sm font-medium mb-2">
+                    Email *
                   </label>
                   <Input
-                    id="email"
-                    name="email"
                     type="email"
-                    required
-                    autoComplete="email"
+                    name="email"
                     value={formState.email}
-                    onChange={(e) => setFormState({ ...formState, email: e.target.value })}
-                    className="h-12"
-                    aria-required="true"
+                    onChange={(e) =>
+                      setFormState({ ...formState, email: e.target.value })
+                    }
+                    className={`h-12 ${errors.email ? "border-red-500" : ""}`}
                   />
+                  {errors.email && (
+                    <p className="text-red-500 text-sm mt-1">
+                      {errors.email}
+                    </p>
+                  )}
                 </div>
 
+                {/* PHONE */}
                 <div>
-                  <label htmlFor="phone" className="block text-sm font-medium text-foreground mb-2">
-                    Phone Number (optional)
+                  <label className="block text-sm font-medium mb-2">
+                    Phone
                   </label>
                   <Input
-                    id="phone"
                     name="phone"
-                    type="tel"
-                    autoComplete="tel"
                     value={formState.phone}
-                    onChange={(e) => setFormState({ ...formState, phone: e.target.value })}
-                    className="h-12"
+                    onChange={(e) =>
+                      setFormState({ ...formState, phone: e.target.value })
+                    }
+                    className={`h-12 ${errors.phone ? "border-red-500" : ""}`}
                   />
+                  {errors.phone && (
+                    <p className="text-red-500 text-sm mt-1">
+                      {errors.phone}
+                    </p>
+                  )}
                 </div>
 
+                {/* SUBJECT */}
                 <div>
-                  <label htmlFor="subject" className="block text-sm font-medium text-foreground mb-2">
-                    Subject <span className="text-destructive" aria-hidden="true">*</span>
-                    <span className="sr-only">(required)</span>
+                  <label className="block text-sm font-medium mb-2">
+                    Subject *
                   </label>
                   <select
-                    id="subject"
                     name="subject"
-                    required
                     value={formState.subject}
-                    onChange={(e) => setFormState({ ...formState, subject: e.target.value })}
-                    className="h-12 w-full rounded-md border border-input bg-transparent px-3 text-base shadow-xs outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]"
-                    aria-required="true"
+                    onChange={(e) =>
+                      setFormState({ ...formState, subject: e.target.value })
+                    }
+                    className={`w-full h-12 border rounded-md px-3 ${
+                      errors.subject ? "border-red-500" : ""
+                    }`}
                   >
-                    <option value="">Please select a topic</option>
+                    <option value="">Select topic</option>
                     <option value="programs">Programs & Services</option>
                     <option value="volunteer">Volunteering</option>
                     <option value="donate">Donations</option>
-                    <option value="partnership">Partnership Opportunities</option>
+                    <option value="partnership">Partnership</option>
                     <option value="general">General Inquiry</option>
                   </select>
+                  {errors.subject && (
+                    <p className="text-red-500 text-sm mt-1">
+                      {errors.subject}
+                    </p>
+                  )}
                 </div>
 
+                {/* MESSAGE */}
                 <div>
-                  <label htmlFor="message" className="block text-sm font-medium text-foreground mb-2">
-                    Message <span className="text-destructive" aria-hidden="true">*</span>
-                    <span className="sr-only">(required)</span>
+                  <label className="block text-sm font-medium mb-2">
+                    Message *
                   </label>
                   <textarea
-                    id="message"
-                    name="message"
-                    required
                     rows={5}
+                    name="message"
                     value={formState.message}
-                    onChange={(e) => setFormState({ ...formState, message: e.target.value })}
-                    className="w-full rounded-md border border-input bg-transparent px-3 py-3 text-base shadow-xs outline-none focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px] resize-none"
-                    aria-required="true"
+                    onChange={(e) =>
+                      setFormState({ ...formState, message: e.target.value })
+                    }
+                    className={`w-full border rounded-md px-3 py-3 ${
+                      errors.message ? "border-red-500" : ""
+                    }`}
                   />
+                  {errors.message && (
+                    <p className="text-red-500 text-sm mt-1">
+                      {errors.message}
+                    </p>
+                  )}
                 </div>
 
-                <Button 
-                  type="submit" 
-                  size="lg" 
+                <Button
+                  type="submit"
+                  size="lg"
                   className="w-full h-12"
                   disabled={isSubmitting}
                 >
                   {isSubmitting ? "Sending..." : "Send Message"}
                 </Button>
 
+                {resultMessage && (
+                  <p className="text-center text-sm text-muted-foreground">
+                    {resultMessage}
+                  </p>
+                )}
                 <p className="text-sm text-muted-foreground text-center">
                   We respect your privacy. Your information will never be shared.
                 </p>

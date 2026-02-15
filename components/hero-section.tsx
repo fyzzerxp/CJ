@@ -77,7 +77,7 @@ export function HeroSection ()  {
 
             <Button variant="outline" size="lg" >
               <Phone className="w-5 h-5 mr-2" />
-              Call Us: +61 0457052522
+              Call Us: 61 457052522
             </Button>
           </div>
 

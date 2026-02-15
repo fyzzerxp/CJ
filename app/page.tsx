@@ -1,3 +1,7 @@
+"use client"
+
+import { motion } from "framer-motion"
+
 import { Header } from "@/components/header"
 import { HeroSection } from "@/components/hero-section"
 import { Footer } from "@/components/footer"
@@ -199,59 +203,77 @@ function ParallaxImpactSection() {
 
 
 // CTA section for getting involved
+
+
 function CTASection() {
   return (
-    <section
-      aria-labelledby="cta-heading"
-      className="relative py-20 sm:py-28 overflow-hidden bg-primary"
-    >
-      {/* Soft gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-br from-primary via-primary to-primary/80 opacity-90" />
+    <section className="py-24 sm:py-32 bg-gradient-to-br from-primary via-secondary to-accent text-foreground text-center relative overflow-hidden">
+      {/* Animated background shapes */}
+      <div className="absolute inset-0 pointer-events-none">
+        <motion.div 
+          animate={{ y: [0, -20, 0] }}
+          transition={{ duration: 4, repeat: Infinity }}
+          className="absolute top-10 left-10 w-32 h-32 bg-white/10 rounded-full blur-3xl"
+        />
+        <motion.div 
+          animate={{ y: [0, 20, 0] }}
+          transition={{ duration: 5, repeat: Infinity, delay: 0.5 }}
+          className="absolute bottom-20 right-20 w-40 h-40 bg-white/10 rounded-full blur-3xl"
+        />
+      </div>
 
-      {/* Decorative glow shapes */}
-      <div className="absolute -top-20 -left-20 w-72 h-72 bg-white/10 rounded-full blur-3xl" />
-      <div className="absolute -bottom-20 -right-20 w-72 h-72 bg-white/10 rounded-full blur-3xl" />
+      {/* Pattern overlay */}
+      <div className="absolute inset-0 opacity-10 pointer-events-none">
+        <div className="absolute inset-0" style={{
+          backgroundImage: 'radial-gradient(circle at 20% 50%, white 1px, transparent 1px)',
+          backgroundSize: '40px 40px'
+        }} />
+      </div>
 
-      <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-primary-foreground">
-        
-        <h2
-          id="cta-heading"
-          className="text-3xl sm:text-4xl lg:text-5xl font-bold leading-tight"
+      <motion.div
+        initial={{ opacity: 0, scale: 0.95 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="relative max-w-4xl mx-auto px-4"
+      >
+        <motion.div
+          animate={{ rotate: 360 }}
+          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+          className="inline-block text-6xl mb-6"
         >
-          Ready to Take the Next Step?
-          <span className="block mt-2 text-white">
-            Let’s Support You Today.
-          </span>
+          ✨
+        </motion.div>
+
+        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight mb-4">
+        Ready to Take the Next Step?
         </h2>
 
-        <p className="mt-8 text-lg sm:text-xl text-primary-foreground/90 max-w-2xl mx-auto leading-relaxed">
-          Whether you're seeking support for yourself or a loved one,
-          our team is here to listen, guide and provide care that truly makes a difference.
+        <p className="text-lg sm:text-xl opacity-95 max-w-2xl mx-auto mb-10 font-medium">
+        Whether you're seeking support for yourself or a loved one,
+        our team is here to listen, guide and provide care that truly makes a difference.
         </p>
 
-        <div className="mt-12 flex flex-col sm:flex-row justify-center gap-5">
-          <Button
-            asChild
-            size="lg"
-           
-            className="h-14 px-10 bg-white text-primary font-semibold hover:bg-white/90 transition-all duration-300"
-          >
-            <Link href="/contact">Get Started</Link>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+          <Button asChild size="lg" className="h-12 px-8 rounded-full shadow-xl">
+            <Link href="/contact">Get in touch</Link>
           </Button>
-
-          <Button
-            asChild
-            size="lg"
-            variant="secondary"
-            className="h-14 px-10 bg-transparent border border-white/40 text-white hover:bg-white/10 transition-all duration-300"
-          >
-            <Link href="/services">Explore Services</Link>
+          </motion.div>
+          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+          <Button variant="outline" asChild size="lg" className="h-12 px-8 rounded-full border-white shadow-xl">
+            <Link href="/services">Explore services</Link>
           </Button>
+          </motion.div>
+         
         </div>
-      </div>
+
+       
+      </motion.div>
     </section>
-  );
+  )
 }
+
 
 
 export default function Home() {

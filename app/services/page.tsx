@@ -1,3 +1,7 @@
+"use client"
+
+import { motion } from "framer-motion"
+
 import type { Metadata } from "next"
 import Link from "next/link"
 import { Header } from "@/components/header"
@@ -5,7 +9,7 @@ import { Footer } from "@/components/footer"
 import { AccessibilityToolbar } from "@/components/accessibility-toolbar"
 import { Button } from "@/components/ui/button"
 
-export const metadata: Metadata = {
+ const metadata: Metadata = {
   title: "Our Programs | Ability First Foundation",
   description: "Explore our comprehensive programs including Home Nursing Services, therapy services, mobility assistance, employment programs, community integration, and family resources.",
 }
@@ -149,21 +153,56 @@ const programs = [
 function PageHero() {
   return (
     <section 
-      className="bg-gradient-to-b from-secondary to-background py-16 sm:py-20"
+      className="relative py-24 sm:py-32 overflow-hidden bg-gradient-to-b from-primary/10 to-background"
       aria-labelledby="page-heading"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      {/* Decorative background shapes */}
+      <div className="absolute top-0 left-10 w-40 h-40 bg-secondary/10 rounded-full blur-3xl" />
+      <div className="absolute bottom-10 right-20 w-56 h-56 bg-accent/10 rounded-full blur-3xl" />
+      <div className="absolute top-1/3 right-1/4 w-32 h-32 bg-primary/10 rounded-full blur-3xl" />
+
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.8 }}
+        className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center"
+      >
+        <motion.div 
+          className="inline-block mb-6 px-4 py-2 bg-primary/15 rounded-full border border-primary/30"
+          whileHover={{ scale: 1.05 }}
+        >
+          <span className="text-sm font-semibold text-primary">Comprehensive Care Solutions</span>
+        </motion.div>
+
         <h1 
           id="page-heading"
-          className="text-4xl sm:text-5xl font-bold text-foreground tracking-tight text-balance"
+          className="text-5xl sm:text-6xl lg:text-7xl font-black leading-tight text-foreground"
         >
           Our Programs & Services
         </h1>
-        <p className="mt-6 text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto text-pretty">
-          Comprehensive support designed to meet individual needs and promote independence, 
-          growth, and community participation.
+        
+        <p className="mt-6 text-lg sm:text-xl text-muted-foreground max-w-2xl mx-auto leading-relaxed font-medium">
+          Comprehensive support designed to meet individual needs and promote independence, growth, and community participation.
         </p>
-      </div>
+
+        <div className="mt-10 flex justify-center gap-2">
+          <motion.div 
+            animate={{ y: [0, -4, 0] }}
+            transition={{ duration: 2, repeat: Infinity }}
+            className="w-1 h-1 bg-primary rounded-full"
+          />
+          <motion.div 
+            animate={{ y: [0, -6, 0] }}
+            transition={{ duration: 2, repeat: Infinity, delay: 0.2 }}
+            className="w-1 h-1 bg-secondary rounded-full"
+          />
+          <motion.div 
+            animate={{ y: [0, -4, 0] }}
+            transition={{ duration: 2, repeat: Infinity, delay: 0.4 }}
+            className="w-1 h-1 bg-accent rounded-full"
+          />
+        </div>
+      </motion.div>
     </section>
   )
 }
@@ -171,61 +210,97 @@ function PageHero() {
 function ProgramsGrid() {
   return (
     <section 
-      className="py-16 sm:py-24 bg-background"
+      className="py-20 sm:py-28 bg-background relative overflow-hidden"
       aria-labelledby="programs-heading"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="space-y-16">
+      {/* Decorative elements */}
+      <div className="absolute inset-0 pointer-events-none">
+        <div className="absolute top-20 left-5% w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
+        <div className="absolute bottom-40 right-10% w-80 h-80 bg-secondary/5 rounded-full blur-3xl" />
+      </div>
+
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Section Header */}
+        <motion.div 
+          className="text-center mb-16"
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
+          <h2 id="programs-heading" className="text-3xl sm:text-4xl font-black text-foreground mb-4">
+            Explore Our Services
+          </h2>
+          <div className="w-16 h-1 bg-gradient-to-r from-primary via-secondary to-accent mx-auto rounded-full" />
+        </motion.div>
+
+        <div className="grid md:grid-cols-2 gap-8">
           {programs.map((program, index) => (
-            <article 
+            <motion.article 
               key={program.id}
               id={program.id}
-              className={`scroll-mt-24 ${index % 2 === 1 ? 'bg-secondary -mx-4 px-4 sm:-mx-6 sm:px-6 lg:-mx-8 lg:px-8 py-12 rounded-2xl' : ''}`}
+              initial={{ opacity: 0, y: 60 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: index * 0.1 }}
+              className="group scroll-mt-24"
               aria-labelledby={`${program.id}-heading`}
             >
-              <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 items-start">
-                <div className={index % 2 === 1 ? 'lg:order-2' : ''}>
-                  <div className="flex items-center gap-4 mb-6">
-                    <div className="w-16 h-16 bg-primary/10 rounded-xl flex items-center justify-center text-primary" aria-hidden="true">
+              <div className="relative h-full bg-gradient-to-br from-card to-card/80 rounded-3xl p-8 border border-border hover:border-primary/30 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 hover:-translate-y-1 overflow-hidden">
+                
+                
+               
+
+                {/* Accent line */}
+                <div className="absolute top-0 left-0 h-1 w-0 bg-gradient-to-r from-primary via-secondary to-accent group-hover:w-full transition-all duration-500" />
+
+                <div className="relative">
+                  {/* Icon and Title */}
+                  <div className="flex items-start gap-4 mb-4">
+                    <div className="w-14 h-14 bg-primary/15 rounded-xl flex items-center justify-center text-primary flex-shrink-0 group-hover:bg-primary/25 transition-colors">
                       {program.icon}
                     </div>
-                    <h2 
+                    <h3 
                       id={`${program.id}-heading`}
-                      className="text-2xl sm:text-3xl font-bold text-foreground"
+                      className="text-xl font-bold text-foreground group-hover:text-primary transition-colors duration-300 flex-1"
                     >
                       {program.title}
-                    </h2>
+                    </h3>
                   </div>
-                  <p className="text-lg text-muted-foreground leading-relaxed">
+
+                  {/* Description */}
+                  <p className="text-muted-foreground leading-relaxed mb-6 text-sm">
                     {program.description}
                   </p>
-                  <div className="mt-6">
-                    <Button asChild>
-                      <Link href={program.href}>Learn More</Link>
-                    </Button>
-                  </div>
-                </div>
 
-                <div className={index % 2 === 1 ? 'lg:order-1' : ''}>
-                  <div className="bg-card border border-border rounded-xl p-6">
-                    <h3 className="font-semibold text-foreground mb-4">Program Features</h3>
-                    <ul 
-                      className="space-y-3"
-                      aria-label={`Features of ${program.title}`}
-                    >
-                      {program.features.map((feature) => (
-                        <li key={feature} className="flex items-start gap-3 text-muted-foreground">
-                          <svg className="w-5 h-5 text-primary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" aria-hidden="true">
-                            <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-                          </svg>
-                          {feature}
-                        </li>
-                      ))}
-                    </ul>
+                  {/* Features */}
+                  <div className="space-y-2 mb-7">
+                    {program.features.slice(0, 3).map((feature) => (
+                      <motion.div 
+                        key={feature}
+                        className="flex gap-2 items-start text-xs text-muted-foreground group-hover:text-foreground transition-colors"
+                        whileHover={{ x: 4 }}
+                      >
+                        <svg className="w-4 h-4 text-primary flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" strokeWidth="2.5" stroke="currentColor" aria-hidden="true">
+                          <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+                        </svg>
+                        <span>{feature}</span>
+                      </motion.div>
+                    ))}
                   </div>
+
+                  {/* Button */}
+                  <Button
+                    asChild
+                    className="w-full bg-primary text-white font-semibold rounded-full transition-all duration-300 group-hover:shadow-lg group-hover:shadow-primary/30"
+                  >
+                    <Link href={program.href}>
+                      Learn More
+                    </Link>
+                  </Button>
                 </div>
               </div>
-            </article>
+            </motion.article>
           ))}
         </div>
       </div>
@@ -236,29 +311,72 @@ function ProgramsGrid() {
 function CTASection() {
   return (
     <section 
-      className="py-16 sm:py-24 bg-primary"
+      className="py-24 sm:py-32 bg-gradient-to-br from-primary via-secondary to-accent text-foreground text-center relative overflow-hidden"
       aria-labelledby="cta-heading"
     >
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+      {/* Animated background shapes */}
+      <div className="absolute inset-0 pointer-events-none">
+        <motion.div 
+          animate={{ y: [0, -20, 0] }}
+          transition={{ duration: 4, repeat: Infinity }}
+          className="absolute top-10 left-10 w-32 h-32 bg-white/10 rounded-full blur-3xl"
+        />
+        <motion.div 
+          animate={{ y: [0, 20, 0] }}
+          transition={{ duration: 5, repeat: Infinity, delay: 0.5 }}
+          className="absolute bottom-20 right-20 w-40 h-40 bg-white/10 rounded-full blur-3xl"
+        />
+      </div>
+
+      {/* Pattern overlay */}
+      <div className="absolute inset-0 opacity-10 pointer-events-none">
+        <div className="absolute inset-0" style={{
+          backgroundImage: 'radial-gradient(circle at 20% 50%, white 1px, transparent 1px)',
+          backgroundSize: '40px 40px'
+        }} />
+      </div>
+
+      <motion.div
+        initial={{ opacity: 0, scale: 0.95 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"
+      >
+        <motion.div
+          animate={{ rotate: 360 }}
+          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+          className="inline-block text-6xl mb-6"
+        >
+          ✨
+        </motion.div>
+
         <h2 
           id="cta-heading"
-          className="text-3xl sm:text-4xl font-bold text-primary-foreground text-balance"
+          className="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight mb-4"
         >
           Ready to Get Started?
         </h2>
-        <p className="mt-6 text-lg text-primary-foreground/90 max-w-2xl mx-auto">
-          Contact us today to learn more about how our programs can support you or your loved one. 
-          Our team is here to answer your questions and help you find the right services.
+        
+        <p className="text-lg sm:text-xl opacity-95 max-w-2xl mx-auto mb-10 font-medium">
+          Contact us today to learn more about how our programs can support you or your loved one. Our team is here to answer your questions and help you find the right services.
         </p>
-        <div className="mt-10 flex flex-wrap justify-center gap-4">
-          <Button asChild variant="secondary" size="lg" className="h-12 px-8">
-            <Link href="/contact">Contact Us</Link>
-          </Button>
-          <Button asChild variant="outline" size="lg" className="h-12 px-8 bg-transparent border-primary-foreground/30 text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground">
-            <Link href="/get-involved">Support Our Mission</Link>
-          </Button>
+
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            <Button
+              asChild
+              size="lg"
+              className="h-12 px-8 rounded-full shadow-xl"
+            >
+              <Link href="/contact">Contact Us</Link>
+            </Button>
+          </motion.div>
+          
         </div>
-      </div>
+
+        
+      </motion.div>
     </section>
   )
 }

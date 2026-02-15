@@ -43,7 +43,7 @@ export function Footer() {
               aria-label="Ability First Foundation - Home"
             >
               <div className="w-10 h-10 bg-primary rounded-full flex items-center justify-center" aria-hidden="true">
-              <img className="w-10 h-10 bg-primary rounded-full" src="logo.jpeg" alt="" />
+              <img className="w-10 h-10 bg-primary rounded-full" src="/logo.jpeg" alt="" />
               </div>
               <span className="font-bold text-lg">CJ SUPPORT SERVICES</span>
             </Link>

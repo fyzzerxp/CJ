@@ -1,5 +1,33 @@
 export function AboutSection() {
 
+  const expertise = [
+    {
+      title: "Comprehensive Clinical Assessments",
+      description:
+        "Thorough health evaluations and ongoing monitoring to ensure safe, effective and responsive care.",
+    },
+    {
+      title: "Wound Care & Complex Health Support",
+      description:
+        "Professional management of chronic wounds, post-surgical recovery and high-level clinical needs.",
+    },
+    {
+      title: "Medication Management & Administration",
+      description:
+        "Safe handling, administration and monitoring of medications in line with best-practice standards.",
+    },
+    {
+      title: "Continence Assessments & Support",
+      description:
+        "Specialised continence care promoting dignity, comfort and long-term wellbeing.",
+    },
+    {
+      title: "Individualised Care Planning",
+      description:
+        "Collaborative care plans aligned with participant goals and NDIS funding arrangements.",
+    },
+  ];
+  
   const services = [
     {
       title: "Home Nursing Services",
@@ -125,9 +153,6 @@ export function AboutSection() {
 
   return (
     <div className="min-h-screen bg-background">
-      
-     
-
       {/* Who We Are Section */}
       <section className="relative py-20 sm:py-28 lg:py-32 bg-background">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -135,34 +160,28 @@ export function AboutSection() {
             {/* Left Content */}
             <div className="max-w-xl">
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-foreground leading-tight">
-                Who We Are
+                Nurse-Led Disability & Community Nursing Support
               </h2>
 
               <div className="mt-8 space-y-6 text-base sm:text-lg text-muted-foreground leading-relaxed">
                 <p>
-                  We understand that every situation is unique. Whether you are
-                  a parent supporting a child with additional needs, an adult
-                  managing a disability, or a carer who needs time to rest and
-                  recharge, our team is here to support you with respect,
-                  understanding and genuine care.
+                  C&J Support Services is a nurse-led disability support
+                  provider founded and operated by Registered Nurses with
+                  extensive clinical experience.
                 </p>
 
-                <p>
-                  As a provider, our focus is not only on delivering services,
-                  but on building long-term, trusted relationships that help
-                  people feel safe, confident and supported in their everyday
-                  lives.
-                </p>
-
-                <p>
-                  We offer a coordinated range of supports designed to adapt to
-                  changing needs and grow with each individual and family.
+                <p className="mt-6">
+                  We combine advanced medical knowledge with person-centred care
+                  to support individuals living with disability, complex health
+                  needs and ageing-related challenges, ensuring every
+                  participant receives safe, professional and evidence-based
+                  support tailored to their goals.
                 </p>
               </div>
             </div>
 
-              {/* Image */}
-              <div className="relative w-full max-w-lg">
+            {/* Image */}
+            <div className="relative w-full max-w-lg">
               <img
                 src="/10.png"
                 alt="Support and care"
@@ -176,7 +195,39 @@ export function AboutSection() {
         </div>
       </section>
 
-     
+      {/* CLINICAL EXPERTISE */}
+      <section className="py-20 sm:py-28 bg-muted/30">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+          <div className="max-w-3xl mb-16">
+            <h2 className="text-3xl sm:text-4xl font-bold text-foreground">
+              Our Clinical Expertise
+            </h2>
+            <p className="mt-6 text-lg text-muted-foreground leading-relaxed">
+              Our Registered Nurses bring advanced clinical knowledge and
+              hands-on experience in managing both routine and complex health
+              needs. Every service is delivered with safety, professionalism and
+              evidence-based care at its core.
+            </p>
+          </div>
+
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {expertise.map((item) => (
+              <div
+                key={item.title}
+                className="bg-card border border-border rounded-xl p-6 hover:shadow-lg transition duration-300"
+              >
+                <h3 className="text-lg font-semibold text-foreground">
+                  {item.title}
+                </h3>
+                <p className="mt-3 text-muted-foreground">
+                  {item.description}
+                </p>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
 
       {/* Why Families Trust Us */}
       <section className="relative py-20 sm:py-28 lg:py-32 bg-gradient-to-b from-background to-secondary/30">
@@ -208,17 +259,19 @@ export function AboutSection() {
           <div className="mt-16 grid md:grid-cols-3 gap-8">
             {[
               {
-                title: "We Listen",
+                title: "Nurse-Led Leadership",
                 description:
-                  "Taking time to understand your unique situation and needs",
+                  "Founded and operated by Registered Nurses with extensive clinical experience.",
               },
               {
-                title: "We Adapt",
-                description: "Flexible support that grows and changes with you",
+                title: "Clinical Expertise",
+                description:
+                  "Comprehensive assessments, medication management, wound care and complex health support.",
               },
               {
-                title: "We Care",
-                description: "Genuine commitment to your wellbeing and dignity",
+                title: "Person-Centred Care",
+                description:
+                  "Tailored, respectful support aligned with individual goals and NDIS plans.",
               },
             ].map((item) => (
               <div
@@ -234,7 +287,7 @@ export function AboutSection() {
             text-center
             transition-all
             duration-500
-            hover:-translate-y-3
+            hover:-translate-y-1
             hover:shadow-xl
             hover:border-primary/40
           "
@@ -272,8 +325,8 @@ export function AboutSection() {
         </div>
       </section>
 
-       {/* Our Promise */}
-       <section
+      {/* Our Promise */}
+      <section
         className="relative py-16 sm:py-24 bg-fixed bg-center bg-cover"
         style={{
           backgroundImage: "url('/3.jpeg')", // put your image path here
@@ -283,22 +336,17 @@ export function AboutSection() {
         <div className="absolute inset-0 bg-black/70"></div>
 
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-6">Our Promise</h2>
+          <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-primary ">
+            Our Promise
+          </h2>
 
           <div className="space-y-4 text-lg leading-relaxed">
-            <p>
-              At CJ SupportServices, we are here to support not just needs, but
-              lives.
-            </p>
-
-            <p className="text-xl font-semibold">
-              We don't just deliver services — we build relationships.
-            </p>
-
-            <p>
-              We promise to treat every person with dignity, to communicate
-              openly, and to provide care that truly makes a positive difference
-              for individuals and families.
+            <p className="text-lg leading-relaxed">
+              At C&J Support Services, we do more than deliver support — we
+              build trusted, long-term relationships grounded in dignity, open
+              communication and evidence-based care. With nursing leadership
+              guiding every service we provide, your wellbeing and independence
+              are always our highest priority.
             </p>
           </div>
         </div>
@@ -309,7 +357,7 @@ export function AboutSection() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center max-w-3xl mx-auto mb-12">
             <h2 className="text-3xl sm:text-4xl lg:text-5xl  font-bold text-foreground">
-              Our Services
+              Our Clinical & Community Services
             </h2>
             <p className="mt-4 text-lg text-muted-foreground">
               A coordinated range of supports designed to adapt to changing
@@ -333,7 +381,7 @@ export function AboutSection() {
                   transition-all
                   duration-500
                   ease-out
-                  hover:-translate-y-3
+                  hover:-translate-y-1
                   hover:shadow-2xl
                   hover:border-primary/40
                   cursor-pointer

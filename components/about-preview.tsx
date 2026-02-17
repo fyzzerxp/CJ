@@ -7,9 +7,9 @@ import Reveal from "./utils/reveal-wrapper";
 export function AboutPreview() {
   const values = [
     {
-      title: "Inclusion",
-      description:
-        "We believe everyone belongs and has something valuable to contribute to our community.",
+      title: "Nurse-Led Leadership",
+    description:
+      "Founded and operated by Registered Nurses with extensive clinical experience.",
       icon: (
         <svg
           className="w-6 h-6"
@@ -27,9 +27,9 @@ export function AboutPreview() {
       ),
     },
     {
-      title: "Respect",
-      description:
-        "We honor the dignity of every person and celebrate individual differences.",
+      title: "Clinical Expertise",
+    description:
+      "Comprehensive assessments, wound care, medication management, and complex health support.",
       icon: (
         <svg
           className="w-6 h-6"
@@ -47,9 +47,9 @@ export function AboutPreview() {
       ),
     },
     {
-      title: "Empowerment",
-      description:
-        "We provide tools and support to help individuals achieve their personal goals.",
+      title: "Person-Centred Care",
+    description:
+      "Tailored support plans that respect individual goals, preferences, and independence.",
       icon: (
         <svg
           className="w-6 h-6"
@@ -67,9 +67,9 @@ export function AboutPreview() {
       ),
     },
     {
-      title: "Excellence",
-      description:
-        "We strive for the highest standards in all our programs and services.",
+      title: "NDIS-Focused Support",
+    description:
+      "Empowering participants to achieve meaningful outcomes and community engagement.",
       icon: (
         <svg
           className="w-6 h-6"
@@ -102,17 +102,17 @@ export function AboutPreview() {
                 id="about-preview-heading"
                 className="text-4xl sm:text-5xl font-bold text-foreground text-balance transition-all duration-500 hover:tracking-wide"
               >
-                Compassionate care for every ability
+                Clinical Excellence. Compassionate Care.
               </h2>
 
               <div className="space-y-6 text-muted-foreground leading-relaxed">
                 <p className="transition-colors duration-300 hover:text-foreground">
-                  At CJ SupportServices, we provide compassionate, reliable and
-                  person-centred support to children, adults, families, carers
-                  and older individuals across Melbourne and Victoria.
+                  At C&J Support Services, we are a nurse-led disability support
+                  provider founded and operated by Registered Nurses. We combine
+                  clinical expertise with compassionate, person-centred care to
+                  support NDIS participants in living with dignity,
+                  independence, and choice.
                 </p>
-
-                
 
                 <p className="transition-colors duration-300 hover:text-foreground">
                   Our focus is not only on delivering services, but on building
@@ -157,7 +157,7 @@ export function AboutPreview() {
   transition-all
   duration-500
   ease-out
-  hover:-translate-y-3
+  hover:-translate-y-1
   hover:shadow-2xl
   hover:border-primary/40
   cursor-pointer

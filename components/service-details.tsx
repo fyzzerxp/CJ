@@ -3,6 +3,7 @@
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
 import { motion } from "framer-motion"
+import { HeartPulse, ShieldCheck, Stethoscope } from "lucide-react"
 
 export function ServiceDetails({ service }: { service: any }) {
   return (
@@ -14,6 +15,9 @@ export function ServiceDetails({ service }: { service: any }) {
         <div className="absolute top-0 left-10 w-40 h-40 bg-secondary/10 rounded-full blur-3xl" />
         <div className="absolute bottom-10 right-20 w-56 h-56 bg-accent/10 rounded-full blur-3xl" />
         <div className="absolute top-1/3 right-1/4 w-32 h-32 bg-primary/10 rounded-full blur-3xl" />
+
+        <HeartPulse className="absolute left-10 top-1/3 w-40 h-40 text-primary/8 rotate-[-10deg]" />
+        <ShieldCheck className="absolute right-10 bottom-1/4 w-48 h-48 text-primary/8 rotate-[8deg]" />
 
         <motion.div
           initial={{ opacity: 0, y: 40 }}
@@ -63,6 +67,10 @@ export function ServiceDetails({ service }: { service: any }) {
     <div className="absolute top-20 left-5% w-64 h-64 bg-primary/5 rounded-full blur-3xl" />
   </div>
 
+      {/* Background Icon */}
+  <Stethoscope className="absolute left-10 top-1/2 -translate-y-1/2 w-40 h-40 text-primary/8" />
+  <HeartPulse className="absolute right-10 bottom-10 w-48 h-48 text-primary/8" />
+
   <motion.div
     initial={{ opacity: 0, y: 40 }}
     whileInView={{ opacity: 1, y: 0 }}
@@ -70,7 +78,7 @@ export function ServiceDetails({ service }: { service: any }) {
     transition={{ duration: 0.6 }}
     className="relative max-w-5xl mx-auto px-4"
   >
-    <div className="relative bg-gradient-to-br from-card to-card/80 backdrop-blur border border-border rounded-3xl p-12 shadow-xl hover:shadow-2xl transition-all duration-300 overflow-hidden group">
+    <div className="relative bg-gradient-to-br from-card to-card/80 backdrop-blur border border-border rounded-3xl p-12 shadow-xl hover:shadow-lg transition-all duration-300 overflow-hidden group">
 
       {/* Accent line */}
       <div className="absolute top-0 left-0 h-1 w-0 bg-gradient-to-r from-primary via-secondary to-accent group-hover:w-full transition-all duration-500" />
@@ -119,11 +127,7 @@ export function ServiceDetails({ service }: { service: any }) {
             {service.approach.points?.map((point, index) => (
               <motion.li
                 key={point}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="group flex items-start gap-4 bg-gradient-to-br from-card to-card/80 border border-border rounded-2xl p-6 hover:shadow-lg hover:scale-105 transition-all duration-300"
+                className="group flex items-start gap-4 bg-gradient-to-br from-card to-card/80 border border-border rounded-2xl p-6 hover:shadow-lg hover:scale-101 transition-all duration-300"
               >
                 <span className="text-primary font-bold text-lg mt-1 flex-shrink-0">✓</span>
                 <span className="text-muted-foreground group-hover:text-foreground transition-colors">{point}</span>
@@ -162,7 +166,7 @@ export function ServiceDetails({ service }: { service: any }) {
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.1 }}
-                className="group bg-gradient-to-br from-card to-card/80 border border-border rounded-3xl p-8 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 hover:-translate-y-1 overflow-hidden relative"
+                className="group bg-gradient-to-br from-card to-card/80 border border-border rounded-3xl p-8 shadow-lg hover:shadow-lg transition-all duration-300 hover:scale-101 hover:-translate-y-1 overflow-hidden relative"
               >
                 {/* Accent line */}
                 <div className="absolute top-0 left-0 h-1 w-0 bg-gradient-to-r from-primary via-secondary to-accent group-hover:w-full transition-all duration-500" />
@@ -254,7 +258,7 @@ export function ServiceDetails({ service }: { service: any }) {
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
                   transition={{ duration: 0.6, delay: index * 0.1 }}
-                  className="group bg-gradient-to-br from-card to-card/80 border border-border rounded-2xl p-6 text-muted-foreground hover:shadow-lg hover:scale-105 transition-all duration-300 group-hover:text-foreground"
+                  className="group bg-gradient-to-br from-card to-card/80 border border-border rounded-2xl p-6 text-muted-foreground hover:shadow-lg hover:scale-101 transition-all duration-300 group-hover:text-foreground"
                 >
                   {point}
                 </motion.li>
@@ -288,10 +292,7 @@ export function ServiceDetails({ service }: { service: any }) {
           </div>
 
           <motion.div
-            initial={{ opacity: 0, scale: 0.95 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
+           
             className="relative max-w-5xl mx-auto px-4 text-center space-y-12"
           >
             <h2 className="text-4xl sm:text-5xl font-black leading-tight">

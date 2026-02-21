@@ -1,21 +1,24 @@
 const stories = [
   {
-    name: "Maria Johnson",
-    role: "Program Participant",
-    quote: "The employment program helped me find a job that I love. For the first time, I feel truly independent and valued at work.",
-    program: "Employment Programs",
-  },
-  {
-    name: "David Chen",
+    name: "Emily R.",
     role: "Parent",
-    quote: "The family support group has been a lifeline for us. Knowing we are not alone and having access to resources has made all the difference.",
-    program: "Family Resources",
+    quote:
+      "CJ Support Services gave our family peace of mind. The home nursing team treats my mother with such dignity and kindness. We finally feel supported.",
+    program: "Home Nursing",
   },
   {
-    name: "Sarah Williams",
-    role: "Program Graduate",
-    quote: "Through therapy services, I gained the strength and skills to pursue my dream of becoming an artist. Now I teach art classes here!",
-    program: "Therapy Services",
+    name: "Liam S.",
+    role: "Caregiver",
+    quote:
+      "The caregiver guidance program helped me feel confident in providing safe and balanced care. I’m no longer overwhelmed — I feel prepared.",
+    program: "Safety & Caregiver Guidance",
+  },
+  {
+    name: "Sophia M.",
+    role: "Parent",
+    quote:
+      "The child development sessions made a huge difference in my son’s growth. Through guided learning and support, he’s more confident and thriving at school.",
+    program: "Child Development Programs",
   },
 ]
 
@@ -35,9 +38,10 @@ export function StoriesSection() {
             Stories of Impact
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            Real stories from real people whose lives have been transformed 
-            through our programs and community.
-          </p>
+  At CJ Support Services, every story reflects compassion, growth, and 
+  real-life impact. Here’s how our care and programs are making a 
+  meaningful difference in the lives of families we serve.
+</p>
         </div>
 
         <div 

@@ -95,40 +95,7 @@ export function GetInvolvedSection() {
           ))}
         </div>
 
-        {/* Donate Section */}
-        <div 
-          id="donate" 
-          className="mt-16 bg-gradient-to-r from-primary to-primary/80 rounded-xl p-8 sm:p-12 text-center"
-          aria-labelledby="donate-heading"
-        >
-          <h3 
-            id="donate-heading"
-            className="text-2xl sm:text-3xl font-bold text-primary-foreground mb-4"
-          >
-            Make a Difference Today
-          </h3>
-          <p className="text-primary-foreground/90 max-w-2xl mx-auto mb-8">
-            Every donation, no matter the size, helps us continue our mission 
-            of supporting people with disabilities. Your generosity changes lives.
-          </p>
-          <div className="flex flex-wrap justify-center gap-4">
-            <Button variant="secondary" size="lg" className="min-w-[100px]">
-              $25
-            </Button>
-            <Button variant="secondary" size="lg" className="min-w-[100px]">
-              $50
-            </Button>
-            <Button variant="secondary" size="lg" className="min-w-[100px]">
-              $100
-            </Button>
-            <Button variant="outline" size="lg" className="min-w-[100px] bg-transparent text-primary-foreground border-primary-foreground/50 hover:bg-primary-foreground/10 hover:text-primary-foreground">
-              Custom
-            </Button>
-          </div>
-          <p className="mt-6 text-sm text-primary-foreground/70">
-            All donations are tax-deductible. You will receive a receipt for your records.
-          </p>
-        </div>
+      
       </div>
     </section>
   )

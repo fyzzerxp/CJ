@@ -92,24 +92,9 @@ export function Header() {
           {/* CTA Buttons */}
           <div className="hidden lg:flex lg:items-center lg:gap-4">
 
-{/* Contact - softer */}
-<Button
-  asChild
-  variant="ghost"
-  className="
-    h-10
-    px-5
-    text-foreground
-    hover:bg-primary/10
-    hover:text-primary
-    transition-all
-    duration-300
-  "
->
-  <Link href="/get-involved#donate">Donate</Link>
-</Button>
 
-{/* Donate - warm highlight */}
+
+
 <Button
   asChild
   className="
@@ -122,7 +107,7 @@ export function Header() {
     shadow-md
     hover:bg-[#e7a53c]
     hover:shadow-lg
-    hover:scale-105
+    hover:scale-101
     transition-all
     duration-300
   "
@@ -175,12 +160,21 @@ export function Header() {
                 </Link>
               ))}
               <div className="flex flex-col gap-3 mt-4 pt-4 border-t border-border">
-                <Button variant="outline" asChild className="w-full bg-transparent">
-                  <Link href="/get-involved">Volunteer</Link>
+                <Button variant="outline" asChild className="h-10
+    px-6
+    rounded-full
+    bg-[#F4B24A] 
+    text-black
+    font-semibold
+    shadow-md
+    hover:bg-[#e7a53c]
+    hover:shadow-lg
+    hover:scale-101
+    transition-all
+    duration-300">
+                  <Link href="/contact">Contact</Link>
                 </Button>
-                <Button asChild className="w-full">
-                  <Link href="/get-involved#donate">Donate</Link>
-                </Button>
+                
               </div>
             </div>
           </div>

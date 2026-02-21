@@ -14,25 +14,16 @@ export const metadata: Metadata = {
 function TeamSection() {
   const team = [
     {
-      name: "Dr. Sarah Mitchell",
-      role: "Executive Director",
+      name: "Jaisy",
+      role: "Director",
       bio: "With over 20 years in disability services, Dr. Mitchell leads our organization with compassion and vision.",
     },
     {
-      name: "Michael Chen",
-      role: "Director of Programs",
+      name: "Simi",
+      role: "Director",
       bio: "Michael oversees all therapeutic and educational programs, ensuring quality care for every participant.",
     },
-    {
-      name: "Lisa Rodriguez",
-      role: "Community Outreach Manager",
-      bio: "Lisa builds partnerships and connections that expand our reach and impact in the community.",
-    },
-    {
-      name: "James Thompson",
-      role: "Volunteer Coordinator",
-      bio: "James manages our dedicated volunteer team and ensures meaningful engagement opportunities.",
-    },
+    
   ]
 
   return (
@@ -50,20 +41,21 @@ function TeamSection() {
             Our Leadership Team
           </h2>
           <p className="mt-4 text-lg text-muted-foreground">
-            Dedicated professionals committed to our mission of empowering 
-            people with disabilities.
+          Passionate leaders dedicated to helping vibrant individuals with 
+            disabilities live confidently, grow independently, and thrive in 
+            a supportive community.
           </p>
         </div>
 
         <div 
-          className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8"
+          className="grid sm:grid-cols-2 lg:grid-cols-2 gap-6 lg:gap-8"
           role="list"
           aria-label="Leadership team members"
         >
           {team.map((member) => (
             <article 
               key={member.name}
-              className="bg-card border border-border rounded-xl p-6 text-center"
+              className="bg-card border border-border rounded-xl p-8 text-center"
               role="listitem"
             >
               <div 

@@ -336,7 +336,7 @@ export function AboutSection() {
         <div className="absolute inset-0 bg-black/70"></div>
 
         <div className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-white">
-          <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-primary ">
+          <h2 className="text-3xl sm:text-4xl font-bold mb-6 text-accent ">
             Our Promise
           </h2>
 

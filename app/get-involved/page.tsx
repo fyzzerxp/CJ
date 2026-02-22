@@ -14,21 +14,29 @@ function PageHero() {
     <section className="bg-gradient-to-br from-secondary to-background py-24 sm:py-32">
       <div className="max-w-5xl mx-auto px-6 text-center">
         <h1 className="text-4xl sm:text-6xl font-bold tracking-tight">
-          Build Careers. Create Impact.
+          Partner With Us. Create Inclusive Impact.
         </h1>
 
         <p className="mt-6 text-lg sm:text-xl text-muted-foreground max-w-3xl mx-auto">
-          Join our team of professionals or partner with us to expand
-          inclusive opportunities for people with disabilities.
+          Collaborate with us to build meaningful opportunities and drive
+          inclusive growth for people with disabilities. Together, we can
+          create lasting social and economic change.
         </p>
 
         <div className="mt-10 flex flex-col sm:flex-row gap-4 justify-center">
-          <Button asChild size="lg" className="h-12 px-8">
-            <Link href="#careers">View Careers</Link>
+          
+
+          <Button
+            asChild
+            variant="outline"
+            size="lg"
+            className="h-12 px-8 text-black"
+          >
+            <Link href="#partner">Learn More</Link>
           </Button>
 
-          <Button asChild variant="outline" size="lg" className="h-12 px-8 text-black">
-            <Link href="#partner">Partner With Us</Link>
+          <Button asChild size="lg" className="h-12 px-8">
+            <Link href="/contact">Become a Partner</Link>
           </Button>
         </div>
       </div>
@@ -93,76 +101,7 @@ function WhyWorkWithUs() {
   )
 }
 
-function CareersSection() {
-  const openings = [
-    {
-      title: "Occupational Therapist",
-      type: "Full-time",
-      location: "Springfield Center",
-    },
-    {
-      title: "Program Coordinator",
-      type: "Full-time",
-      location: "Main Office",
-    },
-    {
-      title: "Speech-Language Pathologist",
-      type: "Part-time",
-      location: "East Center",
-    },
-  ]
 
-  return (
-    <section 
-      id="careers"
-      className="py-16 sm:py-24 bg-secondary"
-      aria-labelledby="careers-heading"
-    >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 
-            id="careers-heading" 
-            className="text-3xl sm:text-4xl font-bold text-foreground text-balance"
-          >
-            Career Opportunities
-          </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
-            Join our professional team and build a meaningful career making a 
-            difference in the lives of people with disabilities.
-          </p>
-        </div>
-
-        <div 
-          className="max-w-2xl mx-auto space-y-4"
-          role="list"
-          aria-label="Job openings"
-        >
-          {openings.map((job) => (
-            <article 
-              key={job.title}
-              className="bg-card border border-border rounded-xl p-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-4"
-              role="listitem"
-            >
-              <div>
-                <h3 className="text-lg font-semibold text-foreground">{job.title}</h3>
-                <p className="text-muted-foreground text-sm">
-                  {job.type} &bull; {job.location}
-                </p>
-              </div>
-              <Button asChild variant={'outline'} className="text-black">
-                <Link href="/contact">Apply Now</Link>
-              </Button>
-            </article>
-          ))}
-        </div>
-
-        <p className="mt-8 text-center text-muted-foreground">
-          Do not see a role that fits? <Link href="/contact" className="text-primary hover:underline">Send us your resume</Link> for future opportunities.
-        </p>
-      </div>
-    </section>
-  )
-}
 
 function PartnerSection() {
   const partners = [
@@ -240,78 +179,7 @@ function PartnerSection() {
   )
 }
 
-function CTASection() {
-  return (
-    <section 
-      className="py-24 sm:py-32 bg-gradient-to-br from-primary via-secondary to-accent text-foreground text-center relative overflow-hidden"
-      aria-labelledby="cta-heading"
-    >
-      {/* Animated background shapes */}
-      <div className="absolute inset-0 pointer-events-none">
-        <motion.div 
-          animate={{ y: [0, -20, 0] }}
-          transition={{ duration: 4, repeat: Infinity }}
-          className="absolute top-10 left-10 w-32 h-32 bg-white/10 rounded-full blur-3xl"
-        />
-        <motion.div 
-          animate={{ y: [0, 20, 0] }}
-          transition={{ duration: 5, repeat: Infinity, delay: 0.5 }}
-          className="absolute bottom-20 right-20 w-40 h-40 bg-white/10 rounded-full blur-3xl"
-        />
-      </div>
 
-      {/* Pattern overlay */}
-      <div className="absolute inset-0 opacity-10 pointer-events-none">
-        <div className="absolute inset-0" style={{
-          backgroundImage: 'radial-gradient(circle at 20% 50%, white 1px, transparent 1px)',
-          backgroundSize: '40px 40px'
-        }} />
-      </div>
-
-      <motion.div
-        initial={{ opacity: 0, scale: 0.95 }}
-        whileInView={{ opacity: 1, scale: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 0.6 }}
-        className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"
-      >
-        <motion.div
-          animate={{ rotate: 360 }}
-          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-          className="inline-block text-6xl mb-6"
-        >
-          ✨
-        </motion.div>
-
-        <h2 
-          id="cta-heading"
-          className="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight mb-4"
-        >
-          Ready to Make an Impact?
-        </h2>
-        
-        <p className="text-lg sm:text-xl opacity-95 max-w-2xl mx-auto mb-10 font-medium">
-        Explore career opportunities or discuss partnership possibilities today.
-        </p>
-
-        <div className="flex flex-col sm:flex-row gap-4 justify-center">
-          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            <Button
-              asChild
-              size="lg"
-              className="h-12 px-8 rounded-full shadow-xl"
-            >
-              <Link href="/contact">Contact Us</Link>
-            </Button>
-          </motion.div>
-          
-        </div>
-
-        
-      </motion.div>
-    </section>
-  )
-}
 
 
 export default function GetInvolvedPage() {
@@ -323,9 +191,8 @@ export default function GetInvolvedPage() {
       <main id="main-content" tabIndex={-1}>
         <PageHero />
         <WhyWorkWithUs/>
-        <CareersSection />
         <PartnerSection />
-        <CTASection/>
+       
       </main>
 
       <Footer />

@@ -16,8 +16,6 @@ const footerLinks = {
   ],
   support: [
     { label: "Get Support", href: "/contact" },
-    { label: "Volunteer", href: "/get-involved" },
-    { label: "Donate", href: "/get-involved#donate" },
     { label: "Partner With Us", href: "/get-involved#partner" },
     { label: "Contact Us", href: "/contact" },
   ],

@@ -101,83 +101,81 @@ function WhyWorkWithUs() {
   )
 }
 
-
-
-function PartnerSection() {
-  const partners = [
-    {
-      title: "Corporate Sponsorship",
-      description: "Sponsor programs, events, or scholarships with your company's support.",
-      benefits: ["Brand visibility", "Employee engagement", "Tax benefits"],
-    },
-    {
-      title: "Employment Partnership",
-      description: "Create inclusive hiring practices and provide job opportunities.",
-      benefits: ["Diverse workforce", "Community impact", "Training support"],
-    },
-    {
-      title: "In-Kind Donations",
-      description: "Donate goods, services, or professional expertise to our programs.",
-      benefits: ["Direct impact", "Flexible giving", "Tax deductible"],
-    },
-  ]
-
+function CTASection() {
   return (
     <section 
-      id="partner"
-      className="py-16 sm:py-24 bg-background"
-      aria-labelledby="partner-heading"
+      className="py-24 sm:py-32 bg-gradient-to-br from-primary via-secondary to-accent text-foreground text-center relative overflow-hidden"
+      aria-labelledby="cta-heading"
     >
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center max-w-3xl mx-auto mb-12">
-          <h2 
-            id="partner-heading" 
-            className="text-3xl sm:text-4xl font-bold text-foreground text-balance"
-          >
-            Partner With Us
-          </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
-            Organizations and businesses can partner with us to create inclusive 
-            opportunities and support our mission in meaningful ways.
-          </p>
-        </div>
-
-        <div 
-          className="grid md:grid-cols-3 gap-6 lg:gap-8"
-          role="list"
-          aria-label="Partnership opportunities"
-        >
-          {partners.map((partner) => (
-            <article 
-              key={partner.title}
-              className="bg-card border border-border rounded-xl p-6 lg:p-8"
-              role="listitem"
-            >
-              <h3 className="text-xl font-semibold text-foreground">{partner.title}</h3>
-              <p className="mt-3 text-muted-foreground">{partner.description}</p>
-              <ul className="mt-4 space-y-2">
-                {partner.benefits.map((benefit) => (
-                  <li key={benefit} className="flex items-center gap-2 text-sm text-muted-foreground">
-                    <svg className="w-4 h-4 text-primary flex-shrink-0" fill="none" viewBox="0 0 24 24" strokeWidth="2" stroke="currentColor" aria-hidden="true">
-                      <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
-                    </svg>
-                    {benefit}
-                  </li>
-                ))}
-              </ul>
-            </article>
-          ))}
-        </div>
-
-        <div className="mt-10 text-center">
-          <Button asChild size="lg" className="h-12 px-8">
-            <Link href="/contact">Discuss Partnership</Link>
-          </Button>
-        </div>
+      {/* Animated background shapes */}
+      <div className="absolute inset-0 pointer-events-none">
+        <motion.div 
+          animate={{ y: [0, -20, 0] }}
+          transition={{ duration: 4, repeat: Infinity }}
+          className="absolute top-10 left-10 w-32 h-32 bg-white/10 rounded-full blur-3xl"
+        />
+        <motion.div 
+          animate={{ y: [0, 20, 0] }}
+          transition={{ duration: 5, repeat: Infinity, delay: 0.5 }}
+          className="absolute bottom-20 right-20 w-40 h-40 bg-white/10 rounded-full blur-3xl"
+        />
       </div>
+
+      {/* Pattern overlay */}
+      <div className="absolute inset-0 opacity-10 pointer-events-none">
+        <div className="absolute inset-0" style={{
+          backgroundImage: 'radial-gradient(circle at 20% 50%, white 1px, transparent 1px)',
+          backgroundSize: '40px 40px'
+        }} />
+      </div>
+
+      <motion.div
+        initial={{ opacity: 0, scale: 0.95 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="relative max-w-4xl mx-auto px-4 sm:px-6 lg:px-8"
+      >
+        <motion.div
+          animate={{ rotate: 360 }}
+          transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
+          className="inline-block text-6xl mb-6"
+        >
+          ✨
+        </motion.div>
+
+        <h2 
+          id="cta-heading"
+          className="text-4xl sm:text-5xl lg:text-6xl font-black leading-tight mb-4"
+        >
+           Let’s Build Impact Together
+        </h2>
+        
+        <p className="text-lg sm:text-xl opacity-95 max-w-2xl mx-auto mb-10 font-medium">
+        Partner with us to create inclusive opportunities, expand access,
+          and drive meaningful change in communities. We’re ready to
+          collaborate with organizations that share our vision.
+        </p>
+
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
+            <Button
+              asChild
+              size="lg"
+              className="h-12 px-8 rounded-full shadow-xl"
+            >
+              <Link href="/contact">Partner With Us</Link>
+            </Button>
+          </motion.div>
+          
+        </div>
+
+        
+      </motion.div>
     </section>
   )
 }
+
 
 
 
@@ -191,7 +189,8 @@ export default function GetInvolvedPage() {
       <main id="main-content" tabIndex={-1}>
         <PageHero />
         <WhyWorkWithUs/>
-        <PartnerSection />
+        <CTASection/>
+      
        
       </main>
 

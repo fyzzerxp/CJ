@@ -137,9 +137,9 @@ export function ContactSection() {
                 <div>
                   <h4 className="font-medium text-foreground">Address</h4>
                   <p className="mt-1 text-muted-foreground">
-                    123 Inclusion Avenue<br />
-                    Community Center, Suite 100<br />
-                    Springfield, ST 12345
+                  16 Black Hazel Crescent<br/>
+Clyde North  3978 <br/>
+Australia
                   </p>
                 </div>
               </div>

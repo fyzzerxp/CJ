@@ -125,7 +125,7 @@ export function AboutPreview() {
                 <Button
                   asChild
                   size="lg"
-                  className="h-12 px-8 transition-all duration-300 hover:scale-105 hover:shadow-lg"
+                  className="h-12 px-8 transition-all duration-300 hover:scale-101 hover:shadow-lg"
                 >
                   <Link href="/about">Learn More About Us</Link>
                 </Button>

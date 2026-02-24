@@ -246,7 +246,7 @@ function ProgramsGrid() {
               className="group scroll-mt-24"
               aria-labelledby={`${program.id}-heading`}
             >
-              <div className="relative h-full bg-gradient-to-br from-card to-card/80 rounded-3xl p-8 border border-border hover:border-primary/30 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-105 hover:-translate-y-1 overflow-hidden">
+              <div className="relative h-full bg-gradient-to-br from-card to-card/80 rounded-3xl p-8 border border-border hover:border-primary/30 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-101 hover:-translate-y-1 overflow-hidden">
                 
                 
                

@@ -70,7 +70,7 @@ export function HeroSection ()  {
 
           {/* Buttons */}
           <div className="flex flex-col sm:flex-row gap-4 mb-12">
-            <Button   size="lg" className="transition-all duration-300 hover:scale-105 hover:shadow-lg">
+            <Button   size="lg" className="transition-all duration-300 hover:scale-101 hover:shadow-lg">
               Get in touch
               <ArrowRight className="ml-2 w-5 h-5" />
             </Button>

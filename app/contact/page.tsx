@@ -6,7 +6,7 @@ import type { Metadata } from "next"
 import { Header } from "@/components/header"
 import { ContactSection } from "@/components/contact-section"
 import { Footer } from "@/components/footer"
-import { AccessibilityToolbar } from "@/components/accessibility-toolbar"
+
 
 
 function PageHero() {
@@ -157,7 +157,7 @@ export default function ContactPage() {
       </main>
 
       <Footer />
-      {/* <AccessibilityToolbar /> */}
+     
     </>
   )
 }

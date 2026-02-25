@@ -12,19 +12,19 @@ export const metadata: Metadata = {
 
 // Team section component
 function TeamSection() {
+  
   const team = [
     {
       name: "Jaisy",
       role: "Director",
-      bio: "With over 20 years in disability services, Dr. Mitchell leads our organization with compassion and vision.",
+      bio: "With over 20 years of experience in disability services, Jaisy leads the organization with compassion, integrity, and a clear strategic vision.",
     },
     {
       name: "Simi",
       role: "Director",
-      bio: "Michael oversees all therapeutic and educational programs, ensuring quality care for every participant.",
+      bio: "Simi oversees all therapeutic and educational programs, ensuring high-quality care and meaningful support for every participant.",
     },
-    
-  ]
+  ];
 
   return (
     <section 

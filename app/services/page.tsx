@@ -18,7 +18,7 @@ const programs = [
     id: "nursing",
     title: "Home Nursing Services",
     href:"/category/adults/home-nursing",
-    description: "We deliver professional and compassionate home nursing services to individuals across Melbourne and Victoria. Our approach is centred on providing high-quality clinical care while supporting independane, dignity, and comfort within the familiarity of home.",
+    description: "We deliver professional and compassionate home nursing services to individuals across Melbourne and Victoria. Our approach is centred on providing high-quality clinical care while supporting independance, dignity, and comfort within the familiarity of home.",
     icon: (
       <svg className="w-10 h-10" fill="none" viewBox="0 0 24 24" strokeWidth="1.5" stroke="currentColor" aria-hidden="true">
         <path strokeLinecap="round" strokeLinejoin="round" d="M4.26 10.147a60.436 60.436 0 00-.491 6.347A48.627 48.627 0 0112 20.904a48.627 48.627 0 018.232-4.41 60.46 60.46 0 00-.491-6.347m-15.482 0a50.57 50.57 0 00-2.658-.813A59.905 59.905 0 0112 3.493a59.902 59.902 0 0110.399 5.84c-.896.248-1.783.52-2.658.814m-15.482 0A50.697 50.697 0 0112 13.489a50.702 50.702 0 017.74-3.342M6.75 15a.75.75 0 100-1.5.75.75 0 000 1.5zm0 0v-3.675A55.378 55.378 0 0112 8.443m-7.007 11.55A5.981 5.981 0 006.75 15.75v-1.5" />
@@ -32,6 +32,37 @@ const programs = [
       "Personal Hygiene and Clinical Personal Care",
       "Palliative Care Support",
       "Catheter and Stoma Care",
+    ],
+  },
+  {
+    id: "sil",
+    title: "Supported Independent Living (SIL)",
+    href: "/services/SIL",
+    description:
+      "Supported Independent Living (SIL) services helping NDIS participants live confidently and independently in their own or shared home. We focus on daily support, skill development, confidence building, and meaningful independence.",
+    icon: (
+      <svg
+        className="w-10 h-10"
+        fill="none"
+        viewBox="0 0 24 24"
+        strokeWidth="1.5"
+        stroke="currentColor"
+        aria-hidden="true"
+      >
+        <path
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
+        />
+      </svg>
+    ),
+    features: [
+      "Daily Living & Household Support",
+      "Personal Care & Hygiene Support",
+      "Skill Development & Confidence Building",
+      "Communication & Social Skills",
+      "Emotional Wellbeing Support",
+      "Shared or Individual Living Arrangements",
     ],
   },
   {
@@ -130,6 +161,7 @@ const programs = [
       
     ],
   },
+  
   {
     id: "respite",
     title: "Respite Care & Short-Term Support",
@@ -245,7 +277,7 @@ function ProgramsGrid() {
               className="group scroll-mt-24"
               aria-labelledby={`${program.id}-heading`}
             >
-              <div className="relative h-full bg-gradient-to-br from-card to-card/80 rounded-3xl p-8 border border-border hover:border-primary/30 shadow-lg hover:shadow-2xl transition-all duration-300 hover:scale-101 hover:-translate-y-1 overflow-hidden">
+              <div className="relative h-full bg-gradient-to-br from-card to-card/80 rounded-3xl p-8 border border-border hover:border-primary/30 shadow-lg hover:shadow-lg transition-all duration-300 hover:scale-101 hover:-translate-y-1 overflow-hidden">
                 
                 
                

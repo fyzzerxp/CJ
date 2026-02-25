@@ -21,44 +21,45 @@ import { AboutPreview } from "@/components/about-preview"
 const services = [
   {
     icon: Stethoscope,
-    title: "Home Nursing",
+    title: "Home Nursing Services",
     description:
-      "Professional nursing and personal care at home—medication support, hygiene assistance, and daily health management.",
-    color: "bg-primary",
-  },
-  {
-    icon: Apple,
-    title: "Dietary & Nutrition Support",
-    description:
-      "Personalized meal planning and nutrition guidance tailored to health needs, allergies, and lifestyle goals.",
-    color: "bg-coral",
-  },
-  {
-    icon: Baby,
-    title: "Child Development Programs",
-    description:
-      "Early intervention and developmental support that nurtures growth through guided play and learning.",
-    color: "bg-primary",
-  },
-  {
-    icon: GraduationCap,
-    title: "School-Age Behavioral Support",
-    description:
-      "Behavioral strategies and social skills support to help children succeed at school and beyond.",
-    color: "bg-coral",
-  },
-  {
-    icon: HeartPulse,
-    title: "Health & Daily Living Assistance",
-    description:
-      "Compassionate support with daily activities while preserving comfort, safety, and dignity.",
+      "Professional clinical care at home including medication management, wound care, diabetes support, and post-hospital nursing.",
     color: "bg-primary",
   },
   {
     icon: ShieldCheck,
-    title: "Safety & Caregiver Guidance",
+    title: "Supported Independent Living (SIL)",
     description:
-      "Practical training and resources to help caregivers provide safe, confident, and balanced care.",
+      "NDIS-funded support that helps individuals live independently with structured daily assistance and skill development.",
+    color: "bg-coral",
+  },
+  {
+    icon: Apple,
+    title: "Dietitian & Nutrition Support",
+    description:
+      "Accredited dietitian services providing personalised nutrition plans, chronic condition management, and healthy lifestyle guidance.",
+    color: "bg-coral",
+  },
+  {
+    icon: HeartPulse,
+    title: "Home Care & Daily Living Support",
+    description:
+      "Compassionate assistance with personal care, household tasks, mobility, and community access while preserving independence.",
+    color: "bg-primary",
+  },
+  
+  {
+    icon: Baby,
+    title: "Child & School-Age Support Programs",
+    description:
+      "Before and after school support, behavioural guidance, and structured programs promoting growth and confidence.",
+    color: "bg-primary",
+  },
+  {
+    icon: GraduationCap,
+    title: "Community Participation & Day Programs",
+    description:
+      "Inclusive NDIS day programs designed to build life skills, social confidence, and meaningful community engagement.",
     color: "bg-coral",
   },
 ];

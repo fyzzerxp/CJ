@@ -113,6 +113,7 @@ export function ContactSection() {
   }
   
   return (
+
     <section 
       id="contact" 
       className="py-16 sm:py-24 bg-secondary"
@@ -122,7 +123,7 @@ export function ContactSection() {
         
 
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-16">
-          {/* Contact Information */}
+          
           <div>
             <h3 className="text-xl font-semibold text-foreground mb-6">Get in Touch</h3>
             

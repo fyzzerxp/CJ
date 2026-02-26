@@ -19,7 +19,6 @@ export function ContactSection() {
   const ACCESS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY!
 
   const [formState, setFormState] = useState({
-    access_key:ACCESS_KEY,
     name: "",
     email: "",
     phone: "",
@@ -74,7 +73,11 @@ export function ContactSection() {
     setResultMessage("Sending...")
   
     try {
-      const response = await axios.post("https://api.web3forms.com/submit", formState, {
+      const response = await axios.post("https://api.web3forms.com/submit", 
+        {
+          access_key: ACCESS_KEY,
+          ...formState,
+        }, {
         headers: {
           "Content-Type": "application/json",
         },

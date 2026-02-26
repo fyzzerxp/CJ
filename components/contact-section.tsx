@@ -15,8 +15,11 @@ interface FormErrors {
 }
 
 export function ContactSection() {
+
+  const ACCESS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY!
+
   const [formState, setFormState] = useState({
-    access_key:process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY,
+    access_key:ACCESS_KEY,
     name: "",
     email: "",
     phone: "",

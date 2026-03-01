@@ -73,6 +73,7 @@ export function ContactSection() {
     setResultMessage("Sending...")
   
     try {
+      console.log("ACCESS_KEY:", ACCESS_KEY)
       const response = await axios.post("https://api.web3forms.com/submit", 
         {
           access_key: ACCESS_KEY,

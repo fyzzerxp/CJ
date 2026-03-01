@@ -1,8 +1,10 @@
 "use client"
 
 import { motion } from "framer-motion"
+
+
 import { Button } from "./ui/button"
-import { Link } from "lucide-react"
+import Link from "next/link"
 
 
 export function CTASection() {

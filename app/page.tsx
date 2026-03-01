@@ -17,7 +17,7 @@ import type { Metadata } from "next";
 import { CTASection } from "@/components/main-cta"
 
 export const metadata: Metadata = {
-  title: "CJ Support Services | NDIS & Home Care Support",
+  title: "CJ Support Services",
   description:
     "Professional home nursing, NDIS support, SIL, dietitian services and community programs designed to empower independence.",
   keywords: [
@@ -90,8 +90,6 @@ const services = [
     color: "bg-coral",
   },
 ];
-
-
 
 
 // Programs preview section
@@ -228,12 +226,6 @@ function ParallaxImpactSection() {
     </section>
   )
 }
-
-
-
-
-
-
 
 
 

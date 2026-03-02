@@ -197,7 +197,7 @@ function ParallaxImpactSection() {
     <section
       className="relative py-18 sm:py-26 bg-fixed bg-center bg-cover"
       style={{
-        backgroundImage: "url('/1.jpeg')", 
+        backgroundImage: "url('/1.webp')", 
       }}
     >
       {/* Dark overlay */}

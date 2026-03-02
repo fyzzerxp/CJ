@@ -8,7 +8,7 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 
-const images = ["/hero.jpg", "/10.png", "/11.png"]
+const images = ["/hero.webp", "/10.webp", "/11.webp"]
 
 
 

@@ -184,7 +184,7 @@ export function AboutSection() {
             {/* Image */}
             <div className="relative w-full max-w-lg">
               <img
-                src="/10.png"
+                src="/10.webp"
                 alt="Support and care"
                 className="rounded-2xl shadow-xl object-cover object-right w-full h-[400px] sm:h-[500px]"
               />
@@ -330,7 +330,7 @@ export function AboutSection() {
       <section
         className="relative py-16 sm:py-24 bg-fixed bg-center bg-cover"
         style={{
-          backgroundImage: "url('/3.jpeg')", // put your image path here
+          backgroundImage: "url('/3.webp')", // put your image path here
         }}
       >
         {/* Dark overlay for readability */}

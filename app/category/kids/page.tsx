@@ -137,7 +137,7 @@ function PageHero() {
     <section className="relative py-24 sm:py-32 overflow-hidden bg-gradient-to-b from-primary/10 to-background">
       <div className="absolute inset-0">
         <img
-          src="/kids.jpg"
+          src="/kids.webp"
           alt="Adult Support Services"
           className="w-full h-full object-cover object-[0%_30%] scale-105"
         />

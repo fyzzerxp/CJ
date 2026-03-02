@@ -86,7 +86,7 @@ function PageHero() {
       {/* Background Image */}
       <div className="absolute inset-0">
         <img
-          src="/9.jpeg"
+          src="/9.webp"
           alt="About CJ SupportServices"
           className="w-full h-full object-cover object-[0%_30%]"
         />

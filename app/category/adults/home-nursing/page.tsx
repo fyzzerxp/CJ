@@ -12,7 +12,7 @@ import { ServiceDetails } from "@/components/service-details"
     "Professional clinical care delivered safely and compassionately in the comfort of your own home.",
 
   intro: `
-At CJ SupportServices, our Home Nursing Services provide professional clinical care in the comfort and familiarity of your home.
+At CJ Support Services, our Home Nursing Services provide professional clinical care in the comfort and familiarity of your home.
 
 We support individuals who require medical care, chronic condition management, or post-hospital nursing — helping you maintain dignity, safety, and independence while receiving high-quality support.
   `,
@@ -92,7 +92,7 @@ We support individuals who require medical care, chronic condition management, o
   },
 
   whyChooseUs: {
-    title: "Why Choose CJ SupportServices for Home Nursing",
+    title: "Why Choose CJ Support Services for Home Nursing",
     points: [
       "Qualified and experienced nursing professionals",
       "Personalised, person-centred care planning",
@@ -103,13 +103,13 @@ We support individuals who require medical care, chronic condition management, o
   },
 
   closing:
-    "Receive professional nursing care in the comfort of your own home. Contact CJ SupportServices today to discuss your clinical care needs.",
+    "Receive professional nursing care in the comfort of your own home. Contact CJ Support Services today to discuss your clinical care needs.",
 }
 
   
 
 export const metadata: Metadata = {
-  title: "Home Nursing Services Melbourne | CJ SupportServices",
+  title: "Home Nursing Services Melbourne | CJ Support Services",
   description:
     "Professional in-home nursing care across Melbourne & Victoria. Medication management, wound care, diabetes support, palliative care and clinical support delivered safely at home.",
 }

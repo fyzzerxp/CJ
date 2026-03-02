@@ -12,7 +12,7 @@ import { ServiceDetails } from "@/components/service-details"
       "Personalised in-home support designed to help you live safely, comfortably, and independently in your own home.",
   
     intro: `
-  At CJ SupportServices, we believe home is more than just a place — it’s where comfort, independence, and dignity belong.
+  At CJ Support Services, we believe home is more than just a place — it’s where comfort, independence, and dignity belong.
   
   Our Home Care Support services help you or your loved one remain safe, supported, and thriving in familiar surroundings. We combine personalised care with compassion, respect, and practical assistance so you can continue living life on your terms.
     `,
@@ -92,7 +92,7 @@ import { ServiceDetails } from "@/components/service-details"
     },
   
     whyChooseUs: {
-      title: "Why Choose CJ SupportServices for Home Care",
+      title: "Why Choose CJ Support Services for Home Care",
       points: [
         "Tailored care plans designed around your goals",
         "Skilled and compassionate care professionals",
@@ -103,12 +103,12 @@ import { ServiceDetails } from "@/components/service-details"
     },
   
     closing:
-      "Experience home care that truly supports your life — your way. Contact CJ SupportServices today to begin your personalised home care journey.",
+      "Experience home care that truly supports your life — your way. Contact CJ Support Services today to begin your personalised home care journey.",
   }
   
   
 export const metadata: Metadata = {
-    title: "Home Care Support Melbourne | CJ SupportServices",
+    title: "Home Care Support Melbourne | CJ Support Services",
     description:
       "Personalised in-home care support across Melbourne & Victoria. Daily assistance, companionship, transport, medication reminders and flexible support funded by NDIS or Home Care Packages.",
   }

@@ -14,7 +14,7 @@ import { ServiceDetails } from "@/components/service-details"
   intro: `
 A clean and organised home supports both physical health and emotional wellbeing.
 
-CJ SupportServices provides reliable Cleaning & Domestic Support to help individuals maintain a safe, comfortable living environment while preserving independence.
+CJ Support Services provides reliable Cleaning & Domestic Support to help individuals maintain a safe, comfortable living environment while preserving independence.
   `,
 
   approach: {
@@ -91,7 +91,7 @@ CJ SupportServices provides reliable Cleaning & Domestic Support to help individ
   },
 
   whyChooseUs: {
-    title: "Why Choose CJ SupportServices for Domestic Support",
+    title: "Why Choose CJ Support Services for Domestic Support",
     points: [
       "Reliable and respectful support staff",
       "Flexible scheduling options",
@@ -102,13 +102,13 @@ CJ SupportServices provides reliable Cleaning & Domestic Support to help individ
   },
 
   closing:
-    "Maintain a clean, safe, and comfortable home with trusted domestic support. Contact CJ SupportServices to arrange personalised assistance.",
+    "Maintain a clean, safe, and comfortable home with trusted domestic support. Contact CJ Support Services to arrange personalised assistance.",
 }
 
   
 
 export const metadata: Metadata = {
-  title: "In-Home Cleaning & Domestic Support Melbourne | CJ SupportServices",
+  title: "In-Home Cleaning & Domestic Support Melbourne | CJ Support Services",
   description:
     "Reliable domestic assistance across Melbourne & Victoria. House cleaning, laundry, meal preparation and home support services for aged care and NDIS participants.",
 }

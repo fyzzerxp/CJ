@@ -7,7 +7,7 @@ import { ServiceDetails } from "@/components/service-details"
     title: "After School Support for Children",
   
     description:
-      "At CJ SupportServices, we understand that the hours after school can be one of the most important — and challenging — times of the day for children and families.",
+      "At CJ Support Services, we understand that the hours after school can be one of the most important — and challenging — times of the day for children and families.",
   
     intro: `
   Children may feel tired, overwhelmed, excited, or frustrated after a long school day, while parents are balancing work and home responsibilities.
@@ -98,7 +98,7 @@ import { ServiceDetails } from "@/components/service-details"
     },
   
     whyChooseUs: {
-      title: "Why Choose CJ SupportServices?",
+      title: "Why Choose CJ Support Services?",
       points: [
         "Safe and supportive environment",
         "Child-centred, family-friendly care",
@@ -109,12 +109,12 @@ import { ServiceDetails } from "@/components/service-details"
     },
   
     closing:
-      "At CJ SupportServices, we believe children deserve a place where they feel safe, valued, and supported after school. We help children grow in confidence, independence, and happiness — one afternoon at a time.",
+      "At CJ Support Services, we believe children deserve a place where they feel safe, valued, and supported after school. We help children grow in confidence, independence, and happiness — one afternoon at a time.",
   }
   
 
   export const metadata: Metadata = {
-    title: "After School Support Services Melbourne | CJ SupportServices",
+    title: "After School Support Services Melbourne | CJ Support Services",
     description:
       "Safe and structured after school support for children across Melbourne & Victoria. NDIS-supported programs focused on wellbeing, behaviour, learning and supervision.",
   }

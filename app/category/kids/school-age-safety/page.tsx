@@ -12,7 +12,7 @@ import { ServiceDetails } from "@/components/service-details"
   intro: `
 Keeping children safe is one of the most important responsibilities families and carers share. As children grow, their world expands — school, outdoor play, online spaces, water, roads, and social interactions.
 
-With increased independence comes the need for practical safety awareness and preparedness. At CJ SupportServices, we work with families to build safe environments, teach protective skills, and promote confidence so children can explore the world with appropriate caution and joy.
+With increased independence comes the need for practical safety awareness and preparedness. At CJ Support Services, we work with families to build safe environments, teach protective skills, and promote confidence so children can explore the world with appropriate caution and joy.
 `,
 category:"Kids Services",
   approach: {
@@ -112,7 +112,7 @@ category:"Kids Services",
   },
 
   whyChooseUs: {
-    title: "Why Choose CJ SupportServices?",
+    title: "Why Choose CJ Support Services?",
     points: [
       "Holistic approach to child safety",
       "Practical, real-world safety education",
@@ -123,12 +123,12 @@ category:"Kids Services",
   },
 
   closing:
-    "At CJ SupportServices, we believe children thrive when they feel safe, informed, and supported. If you would like personalised strategies, education, or guidance around child safety and protection, our team is here to help — with respect, clarity, and care.",
+    "At CJ Support Services, we believe children thrive when they feel safe, informed, and supported. If you would like personalised strategies, education, or guidance around child safety and protection, our team is here to help — with respect, clarity, and care.",
 }
 
 
 export const metadata: Metadata = {
-  title: "School-Age Safety Support Melbourne | CJ SupportServices",
+  title: "School-Age Safety Support Melbourne | CJ Support Services",
   description:
     "Safe and supervised support services for school-age children across Melbourne & Victoria. Promoting wellbeing, routine and independence.",
 }

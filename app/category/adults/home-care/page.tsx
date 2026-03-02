@@ -12,7 +12,7 @@ import { ServiceDetails } from "@/components/service-details"
     "Government-funded in-home aged care services that support older Australians to live safely, independently, and comfortably in their own home.",
 
   intro: `
-At CJ SupportServices, we believe older adults deserve to live with comfort, dignity, and independence in the familiarity of their own home.
+At CJ Support Services, we believe older adults deserve to live with comfort, dignity, and independence in the familiarity of their own home.
 
 Our in-home aged care services support you or your loved one to remain safe, connected, and confident — while maintaining quality of life.
 
@@ -94,7 +94,7 @@ We guide families through the funding process, create personalised care plans, a
   },
 
   whyChooseUs: {
-    title: "Why Choose CJ SupportServices",
+    title: "Why Choose CJ Support Services",
     points: [
       "Guidance through My Aged Care and funding processes",
       "Clear explanation of budgets and classifications",
@@ -106,13 +106,13 @@ We guide families through the funding process, create personalised care plans, a
   },
 
   closing:
-    "Aged care funding and support options can feel overwhelming — but you don’t have to navigate it alone. Contact CJ SupportServices today to begin your Support at Home journey and live confidently in your own home.",
+    "Aged care funding and support options can feel overwhelming — but you don’t have to navigate it alone. Contact CJ Support Services today to begin your Support at Home journey and live confidently in your own home.",
 }
 
   
 
 export const metadata: Metadata = {
-  title: "Support at Home & In-Home Aged Care Melbourne | CJ SupportServices",
+  title: "Support at Home & In-Home Aged Care Melbourne | CJ Support Services",
   description:
     "Government-funded Support at Home services (formerly Home Care Packages). Personal care, household support, transport and health services across Melbourne & Victoria.",
 }

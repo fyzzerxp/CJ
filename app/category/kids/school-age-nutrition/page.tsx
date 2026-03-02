@@ -12,7 +12,7 @@ import { ServiceDetails } from "@/components/service-details"
   intro: `
 Supporting a child’s health through good nutrition and regular activity sets the foundation for lifelong wellbeing. During the school years, eating well and staying active help children grow, learn, think clearly, manage energy levels, and feel confident in their bodies.
 
-At CJ SupportServices, we work alongside families to build healthy eating patterns and active routines that are practical, positive, and age-appropriate. Every family is different — and every child’s nutritional needs evolve as they grow.
+At CJ Support Services, we work alongside families to build healthy eating patterns and active routines that are practical, positive, and age-appropriate. Every family is different — and every child’s nutritional needs evolve as they grow.
 `,
 category:"Kids Services",
   approach: {
@@ -112,7 +112,7 @@ category:"Kids Services",
   },
 
   whyChooseUs: {
-    title: "Why Choose CJ SupportServices?",
+    title: "Why Choose CJ Support Services?",
     points: [
       "Balanced and realistic approach to nutrition",
       "Focus on confidence and positive habits",
@@ -123,13 +123,13 @@ category:"Kids Services",
   },
 
   closing:
-    "At CJ SupportServices, we help families build healthy routines that support growth, confidence, and lifelong wellbeing. If you would like personalised guidance around nutrition, physical activity, or related concerns, our team is here to support you with practical strategies and care.",
+    "At CJ Support Services, we help families build healthy routines that support growth, confidence, and lifelong wellbeing. If you would like personalised guidance around nutrition, physical activity, or related concerns, our team is here to support you with practical strategies and care.",
 }
 
   
 
 export const metadata: Metadata = {
-  title: "School-Age Nutrition Support Melbourne | CJ SupportServices",
+  title: "School-Age Nutrition Support Melbourne | CJ Support Services",
   description:
     "Nutrition support services for school-age children across Melbourne & Victoria. Helping children build healthy eating habits under NDIS support plans.",
 }

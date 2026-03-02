@@ -12,7 +12,7 @@ import { ServiceDetails } from "@/components/service-details"
     "Flexible short-term care that supports families and carers while ensuring continued high-quality support for your loved one.",
 
   intro: `
-At CJ SupportServices, we understand that caring for a loved one is both rewarding and demanding. Sometimes carers need time to rest, recharge, or manage other responsibilities.
+At CJ Support Services, we understand that caring for a loved one is both rewarding and demanding. Sometimes carers need time to rest, recharge, or manage other responsibilities.
 
 Our Respite Care Services provide temporary, compassionate support while ensuring your loved one remains safe, engaged, and well cared for.
 
@@ -94,7 +94,7 @@ We offer flexible, respectful respite options tailored to each person’s needs,
   },
 
   whyChooseUs: {
-    title: "Why Choose CJ SupportServices for Respite",
+    title: "Why Choose CJ Support Services for Respite",
     points: [
       "Person-centred planning tailored to your family",
       "Qualified, compassionate and respectful carers",
@@ -105,12 +105,12 @@ We offer flexible, respectful respite options tailored to each person’s needs,
   },
 
   closing:
-    "Taking a break isn’t just important — it’s essential. Contact CJ SupportServices today to explore respite options and create a sustainable balance of care and wellbeing.",
+    "Taking a break isn’t just important — it’s essential. Contact CJ Support Services today to explore respite options and create a sustainable balance of care and wellbeing.",
 }
 
 
 export const metadata: Metadata = {
-  title: "Respite Care Services Melbourne | Short-Term Support | CJ SupportServices",
+  title: "Respite Care Services Melbourne | Short-Term Support | CJ Support Services",
   description:
     "Flexible respite care services across Melbourne & Victoria. In-home and community respite support for families, carers and NDIS participants.",
 }

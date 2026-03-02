@@ -14,7 +14,7 @@ Between approximately 5 and 12 years of age, children are building independence,
 
 Even though school-age children can focus longer and follow instructions more easily, they still need reassurance, structure, and support — especially when tired, overwhelmed, or navigating new social situations.
 
-At CJ SupportServices, we work alongside families to support positive behaviour development in a calm, respectful, and practical way.
+At CJ Support Services, we work alongside families to support positive behaviour development in a calm, respectful, and practical way.
 `,
 category:"Kids Services",
   approach: {
@@ -109,7 +109,7 @@ category:"Kids Services",
   },
 
   whyChooseUs: {
-    title: "Why Choose CJ SupportServices?",
+    title: "Why Choose CJ Support Services?",
     points: [
       "Positive, skill-building behaviour approach",
       "Focus on connection and communication",
@@ -120,12 +120,12 @@ category:"Kids Services",
   },
 
   closing:
-    "At CJ SupportServices, we believe positive behaviour grows from strong relationships, clear guidance, and emotional support. If your child’s behaviour is affecting daily life, school engagement, or family wellbeing, our team is here to help you build practical strategies with care and confidence.",
+    "At CJ Support Services, we believe positive behaviour grows from strong relationships, clear guidance, and emotional support. If your child’s behaviour is affecting daily life, school engagement, or family wellbeing, our team is here to help you build practical strategies with care and confidence.",
 }
 
 
 export const metadata: Metadata = {
-  title: "School-Age Behaviour Support Melbourne | CJ SupportServices",
+  title: "School-Age Behaviour Support Melbourne | CJ Support Services",
   description:
     "Behaviour support services for school-age children across Melbourne & Victoria. Structured, NDIS-aligned programs promoting positive development.",
 }

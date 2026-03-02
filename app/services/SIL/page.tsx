@@ -12,7 +12,7 @@ import { ServiceDetails } from "@/components/service-details"
       "NDIS Supported Independent Living services helping people with disability live confidently, safely, and independently in their own or shared home.",
   
     intro: `
-  At CJ SupportServices, we believe everyone deserves to live with dignity, independence, and choice.
+  At CJ Support Services, we believe everyone deserves to live with dignity, independence, and choice.
   
   Our Supported Independent Living (SIL) services help people with disability live in their own home or shared environment while receiving personalised, respectful, and consistent support.
   
@@ -94,7 +94,7 @@ import { ServiceDetails } from "@/components/service-details"
     },
   
     whyChooseUs: {
-      title: "Why Choose CJ SupportServices for SIL",
+      title: "Why Choose CJ Support Services for SIL",
       points: [
         "Person-centred, strengths-based approach",
         "Trained, screened, and compassionate staff",
@@ -106,7 +106,7 @@ import { ServiceDetails } from "@/components/service-details"
     },
   
     closing:
-      "Supported Independent Living is about more than care — it’s about empowerment and meaningful independence. Contact CJ SupportServices today to explore SIL options tailored to your goals.",
+      "Supported Independent Living is about more than care — it’s about empowerment and meaningful independence. Contact CJ Support Services today to explore SIL options tailored to your goals.",
   }
   
   

@@ -10,7 +10,7 @@ const weekendSupportService = {
     "Safe, engaging, and supportive weekend care that promotes fun, wellbeing, and personal growth.",
 
   intro: `
-At CJ SupportServices, we understand that children benefit from meaningful activities, structure, and care beyond the school week.
+At CJ Support Services, we understand that children benefit from meaningful activities, structure, and care beyond the school week.
 
 Our Weekend Support Program provides a safe, engaging, and nurturing environment where children can relax, learn, and build confidence — while families receive valuable time to rest or manage other commitments.
 
@@ -87,7 +87,7 @@ As a provider, we help children enjoy weekends in a balanced and positive way.
   },
 
   whyChooseUs: {
-    title: "Why Choose CJ SupportServices?",
+    title: "Why Choose CJ Support Services?",
     points: [
       "Safe and structured weekend environment",
       "Fun, meaningful activities",
@@ -98,11 +98,11 @@ As a provider, we help children enjoy weekends in a balanced and positive way.
   },
 
   closing:
-    "At CJ SupportServices, we make weekends meaningful, balanced, and supportive. Helping children feel safe, happy, and confident — every day of the week.",
+    "At CJ Support Services, we make weekends meaningful, balanced, and supportive. Helping children feel safe, happy, and confident — every day of the week.",
 };
 
 export const metadata: Metadata = {
-  title: "Weekend Child Support Services Melbourne | CJ SupportServices",
+  title: "Weekend Child Support Services Melbourne | CJ Support Services",
   description:
     "Flexible weekend support programs for children across Melbourne & Victoria. Structured care and supervision under NDIS support plans.",
 }

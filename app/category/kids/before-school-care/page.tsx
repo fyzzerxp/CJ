@@ -10,7 +10,7 @@ import { ServiceDetails } from "@/components/service-details"
     "A calm, structured and supportive start to the day, helping children feel prepared, confident and ready to learn.",
 
   intro: `
-At CJ SupportServices, we understand that mornings can be one of the most demanding parts of the day for families. Rushing to get ready, organising school items, and managing emotions can create stress for both children and parents.
+At CJ Support Services, we understand that mornings can be one of the most demanding parts of the day for families. Rushing to get ready, organising school items, and managing emotions can create stress for both children and parents.
 
 Our Before School Care Service is designed to create a calm, structured, and supportive start to the day so children feel prepared, confident, and ready to learn.
 
@@ -93,7 +93,7 @@ category:"Kids Services",
   },
 
   whyChooseUs: {
-    title: "Why Choose CJ SupportServices?",
+    title: "Why Choose CJ Support Services?",
     points: [
       "Calm and structured start to the day",
       "Child-centred, family-friendly approach",
@@ -104,13 +104,13 @@ category:"Kids Services",
   },
 
   closing:
-    "At CJ SupportServices, we help children begin each day feeling calm, confident, and cared for. Supporting positive mornings means setting the foundation for successful days.",
+    "At CJ Support Services, we help children begin each day feeling calm, confident, and cared for. Supporting positive mornings means setting the foundation for successful days.",
 }
 
   
 
 export const metadata: Metadata = {
-  title: "Before School Support Melbourne | CJ SupportServices",
+  title: "Before School Support Melbourne | CJ Support Services",
   description:
     "Reliable before school care and child support services across Melbourne & Victoria. Helping children start the day safely and confidently.",
 }

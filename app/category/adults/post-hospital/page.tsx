@@ -12,7 +12,7 @@ import { ServiceDetails } from "@/components/service-details"
     "Comprehensive support to help you transition safely from hospital to home and recover with confidence.",
 
   intro: `
-Returning home after a hospital stay can feel overwhelming. CJ SupportServices provides structured Post-Hospital Care & Recovery Support to ensure a smooth and safe transition.
+Returning home after a hospital stay can feel overwhelming. CJ Support Services provides structured Post-Hospital Care & Recovery Support to ensure a smooth and safe transition.
 
 Our goal is to reduce hospital readmission, promote healing, and help you regain strength and independence in a supportive home environment.
   `,
@@ -92,7 +92,7 @@ Our goal is to reduce hospital readmission, promote healing, and help you regain
   },
 
   whyChooseUs: {
-    title: "Why Choose CJ SupportServices for Recovery Care",
+    title: "Why Choose CJ Support Services for Recovery Care",
     points: [
       "Smooth hospital-to-home transition support",
       "Professional clinical and personal care services",
@@ -103,7 +103,7 @@ Our goal is to reduce hospital readmission, promote healing, and help you regain
   },
 
   closing:
-    "Recover safely and confidently at home with structured post-hospital support. Contact CJ SupportServices to plan your recovery journey.",
+    "Recover safely and confidently at home with structured post-hospital support. Contact CJ Support Services to plan your recovery journey.",
 }
 
 

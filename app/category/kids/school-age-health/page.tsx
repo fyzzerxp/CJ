@@ -14,7 +14,7 @@ Children’s health and wellbeing form the foundation for positive development d
 
 Good daily health routines promote energy, confidence, resilience, and active participation in school, play, and social life.
 
-At CJ SupportServices, we work alongside families to build and maintain healthy habits while responding to the unique changes and needs that come with school-age growth.
+At CJ Support Services, we work alongside families to build and maintain healthy habits while responding to the unique changes and needs that come with school-age growth.
 `,
 category:"Kids Services",
   approach: {
@@ -114,7 +114,7 @@ category:"Kids Services",
   },
 
   whyChooseUs: {
-    title: "Why Choose CJ SupportServices?",
+    title: "Why Choose CJ Support Services?",
     points: [
       "Holistic approach to child wellbeing",
       "Practical and family-centred guidance",
@@ -125,13 +125,13 @@ category:"Kids Services",
   },
 
   closing:
-    "At CJ SupportServices, we partner with families to promote healthy habits, emotional wellbeing, and growing independence. If you would like personalised support for your child’s health and daily care, our team is here to guide you with respect and expertise.",
+    "At CJ Support Services, we partner with families to promote healthy habits, emotional wellbeing, and growing independence. If you would like personalised support for your child’s health and daily care, our team is here to guide you with respect and expertise.",
 }
 
   
 
 export const metadata: Metadata = {
-  title: "School-Age Health Support Melbourne | CJ SupportServices",
+  title: "School-Age Health Support Melbourne | CJ Support Services",
   description:
     "Health and wellbeing support for school-age children across Melbourne & Victoria. Structured care and supervision aligned with NDIS plans.",
 }

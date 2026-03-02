@@ -10,7 +10,7 @@ import { ServiceDetails } from "@/components/service-details"
     "Safe, reliable and supportive school transport services ensuring children travel comfortably and confidently each day.",
 
   intro: `
-At CJ SupportServices, we understand how important safe and reliable transport is for children and their families. For many families, school travel can be one of the most challenging parts of the day.
+At CJ Support Services, we understand how important safe and reliable transport is for children and their families. For many families, school travel can be one of the most challenging parts of the day.
 
 Our School Transport Support Service ensures children travel to and from school in a safe, comfortable, and supportive way — helping families feel reassured and children feel confident.
 
@@ -88,7 +88,7 @@ category:"Kids Services",
   },
 
   whyChooseUs: {
-    title: "Why Choose CJ SupportServices?",
+    title: "Why Choose CJ Support Services?",
     points: [
       "Safe and reliable school transport",
       "Supervised and supportive journeys",
@@ -99,13 +99,13 @@ category:"Kids Services",
   },
 
   closing:
-    "At CJ SupportServices, we make school travel safe, reliable, and reassuring. Helping children arrive comfortably and on time — every day.",
+    "At CJ Support Services, we make school travel safe, reliable, and reassuring. Helping children arrive comfortably and on time — every day.",
 }
 
   
 
 export const metadata: Metadata = {
-  title: "School Transport Services Melbourne | CJ SupportServices",
+  title: "School Transport Services Melbourne | CJ Support Services",
   description:
     "Safe and reliable school transport services across Melbourne & Victoria. Accessible NDIS travel support for children.",
 }

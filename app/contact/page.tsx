@@ -38,12 +38,12 @@ function FAQSection() {
 
   const faqs = [
     {
-      question: "Who can receive support from CJ SupportServices?",
+      question: "Who can receive support from CJ Support Services?",
       answer:
-        "CJ SupportServices welcomes adults, children, seniors, and individuals living with disability who need extra support at home or in the community. Whether you are an NDIS participant, receiving aged care funding, or seeking private support, we are here to help. Our focus is always on respecting your individuality and supporting you in a way that feels comfortable, safe, and empowering.",
+        "CJ Support Services welcomes adults, children, seniors, and individuals living with disability who need extra support at home or in the community. Whether you are an NDIS participant, receiving aged care funding, or seeking private support, we are here to help. Our focus is always on respecting your individuality and supporting you in a way that feels comfortable, safe, and empowering.",
     },
     {
-      question: "How do I begin my journey with CJ SupportServices?",
+      question: "How do I begin my journey with CJ Support Services?",
       answer:
         "Starting your support journey is simple and stress-free. Our friendly team takes the time to listen, understand your needs, and guide you through each step. We work with you to create a personalised support plan that reflects your goals, routines, and preferences, ensuring you feel confident and supported from the very beginning.",
     },
@@ -87,7 +87,7 @@ function FAQSection() {
             Frequently Asked Questions
           </h2>
           <p className="mt-4 text-muted-foreground">
-            CJ SupportServices — Here to Support You Every Step of the Way
+            CJ Support Services — Here to Support You Every Step of the Way
           </p>
         </div>
 

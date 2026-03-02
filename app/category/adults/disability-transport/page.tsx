@@ -12,7 +12,7 @@ import { ServiceDetails } from "@/components/service-details"
     "Safe, reliable and accessible transport that supports independence, connection, and everyday life across Melbourne & Victoria.",
 
   intro: `
-At CJ SupportServices, we understand that safe and reliable transport is essential for independence and participation in everyday life.
+At CJ Support Services, we understand that safe and reliable transport is essential for independence and participation in everyday life.
 
 Our Disability Transport Services are designed to help individuals travel with confidence, comfort, and dignity. We don’t just provide transport — we create access, opportunity, and freedom.
 
@@ -94,7 +94,7 @@ Every journey is planned around your routine, your goals, and your independence.
   },
 
   whyChooseUs: {
-    title: "Why Choose CJ SupportServices for Transport",
+    title: "Why Choose CJ Support Services for Transport",
     points: [
       "Person-centred transport planning",
       "Safe, accessible, and well-maintained vehicles",
@@ -106,13 +106,13 @@ Every journey is planned around your routine, your goals, and your independence.
   },
 
   closing:
-    "Transport should open doors — not limit them. Contact CJ SupportServices today to arrange safe, reliable disability transport and stay connected to your community.",
+    "Transport should open doors — not limit them. Contact CJ Support Services today to arrange safe, reliable disability transport and stay connected to your community.",
 }
 
   
 
 export const metadata: Metadata = {
-  title: "Disability Transport Services Melbourne | NDIS Transport | CJ SupportServices",
+  title: "Disability Transport Services Melbourne | NDIS Transport | CJ Support Services",
   description:
     "Safe and accessible disability transport across Melbourne & Victoria. Wheelchair-friendly vehicles for medical appointments, community access and daily activities.",
 }

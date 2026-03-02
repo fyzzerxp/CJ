@@ -12,7 +12,7 @@ import { ServiceDetails } from "@/components/service-details"
     "Personalised, evidence-based nutrition support designed to improve health outcomes, manage chronic conditions, and build sustainable eating habits.",
 
   intro: `
-At CJ SupportServices, we recognise that good nutrition plays a vital role in overall health, wellbeing, and independence.
+At CJ Support Services, we recognise that good nutrition plays a vital role in overall health, wellbeing, and independence.
 
 Our Dietitian Services are designed to help individuals optimise nutritional intake, manage chronic conditions, and develop sustainable eating habits that support everyday living.
 
@@ -94,7 +94,7 @@ Whether you're navigating a new health challenge or seeking structured support f
   },
 
   whyChooseUs: {
-    title: "Why Choose CJ SupportServices Dietitian Team",
+    title: "Why Choose CJ Support Services Dietitian Team",
     points: [
       "Accredited and experienced dietitians",
       "Client-centred, personalised nutrition planning",
@@ -105,13 +105,13 @@ Whether you're navigating a new health challenge or seeking structured support f
   },
 
   closing:
-    "Good nutrition supports independence, recovery, and long-term wellbeing. Contact CJ SupportServices today to begin your personalised nutrition journey.",
+    "Good nutrition supports independence, recovery, and long-term wellbeing. Contact CJ Support Services today to begin your personalised nutrition journey.",
 }
 
   
 
 export const metadata: Metadata = {
-  title: "Dietitian Services Melbourne | | CJ SupportServices",
+  title: "Dietitian Services Melbourne | | CJ Support Services",
   description:
     "Accredited dietitian services across Melbourne & Victoria. Nutrition support for diabetes, heart health, weight management and chronic conditions.",
 }

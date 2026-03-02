@@ -12,7 +12,7 @@ import { ServiceDetails } from "@/components/service-details"
       "Structured, person-centred day programs designed to build confidence, life skills, social connection, and meaningful community participation.",
   
     intro: `
-  At CJ SupportServices, we believe meaningful engagement, personal growth, and community connection are essential parts of everyday life.
+  At CJ Support Services, we believe meaningful engagement, personal growth, and community connection are essential parts of everyday life.
   
   Our Day Programs are designed to help individuals build confidence, develop practical skills, explore interests, and participate fully in their community.
   
@@ -94,7 +94,7 @@ import { ServiceDetails } from "@/components/service-details"
     },
   
     whyChooseUs: {
-      title: "Why Choose CJ SupportServices Day Programs",
+      title: "Why Choose CJ Support Services Day Programs",
       points: [
         "Person-centred and goal-focused planning",
         "Engaging, structured, and varied activities",
@@ -106,13 +106,13 @@ import { ServiceDetails } from "@/components/service-details"
     },
   
     closing:
-      "Day Programs are more than activities — they are pathways to confidence, connection, and growth. Contact CJ SupportServices today to explore program options and begin your journey toward active, meaningful participation.",
+      "Day Programs are more than activities — they are pathways to confidence, connection, and growth. Contact CJ Support Services today to explore program options and begin your journey toward active, meaningful participation.",
   }
   
   
 
   export const metadata: Metadata = {
-    title: "Community Participation & Day Programs Melbourne | CJ SupportServices",
+    title: "Community Participation & Day Programs Melbourne | CJ Support Services",
     description:
       "Inclusive NDIS day programs in Melbourne & Regional Victoria. Creative activities, life skills development, social connection and supported community engagement.",
   }

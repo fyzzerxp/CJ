@@ -27,22 +27,10 @@ export const metadata: Metadata = {
     "Dietitian services",
     "Community programs",
   ],
-  openGraph: {
-    title: "CJ Support Services",
-    description:
-      "Compassionate home care and NDIS support tailored to individual needs.",
-    url: "https://cjsupportservices.com.au",
-    siteName: "CJ Support Services",
-    images: [
-      {
-        url: "/logo.jpeg",
-        width: 1200,
-        height: 630,
-        alt: "CJ Support Services",
-      },
-    ],
-    type: "website",
+  icons: {
+    icon: "/favicon.ico",
   },
+  
 };
 
 const services = [
